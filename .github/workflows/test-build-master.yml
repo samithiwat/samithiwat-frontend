@@ -1,0 +1,17 @@
+name: '[Production] Pull request: Build test'
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  docker-build:
+    name: 'Docker build and create an image'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build Application
+        run: |
+          yarn build
