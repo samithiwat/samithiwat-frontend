@@ -7,24 +7,19 @@
 @layer base {
 	@font-face {
 		font-family: 'MuseoModerno';
-		src: url('/fonts/MuseoModerno/MuseoModerno-Regular.ttf');
-		font-weight: 400;
-	}
-	/* @font-face {
-		font-family: 'MuseoModerno';
 		src: url('/fonts/MuseoModerno-Regular.ttf');
 		font-weight: 400;
 	}
 	@font-face {
-		font-family: 'MuseoModerno';
-		src: url('/fonts/MuseoModerno-Regular.ttf');
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins-Regular.ttf');
 		font-weight: 400;
 	}
 	@font-face {
-		font-family: 'MuseoModerno';
-		src: url('/fonts/MuseoModerno-Regular.ttf');
+		font-family: 'Lato';
+		src: url('/fonts/Lato-Regular.ttf');
 		font-weight: 400;
-	} */
+	}
 }
 
 body {
