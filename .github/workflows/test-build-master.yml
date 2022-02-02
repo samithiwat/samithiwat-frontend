@@ -1,0 +1,22 @@
+name: '[Production] Pull request: Build test'
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  docker-build:
+    name: 'Test build application'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          yarn --frozen-lockfile
+
+      - name: Build Application
+        run: |
+          yarn build
