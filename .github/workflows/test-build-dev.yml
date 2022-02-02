@@ -6,12 +6,17 @@ on:
 
 jobs:
   docker-build:
-    name: 'Docker build and create an image'
+    name: 'Test build application'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          yarn --frozen-lockfile
+
       - name: Build Application
         run: |
           yarn build
