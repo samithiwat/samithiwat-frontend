@@ -2,11 +2,14 @@
 	import Icon from '@iconify/svelte';
 </script>
 
-<div class="bg-headerBg text-center font-MuseoModerno w-screen h-100">
+<div class="bg-header text-center font-MuseoModerno w-full h-100">
 	<h2 class="text-white">Hello, Visitor!</h2>
 	<h5 class="text-white">Welcome to my personnal website</h5>
-	>
-	<span class="flex flex-row justify-center my-12 gap-28">
+
+	<span class="flex flex-row justify-center my-12 gap-20">
+		<a href="https://www.linkedin.com/in/samithiwat/" target="_blank" class="">
+			<Icon icon="akar-icons:linkedin-fill" color="white" class="w-20 h-20" />
+		</a>
 		<a href="https://github.com/samithiwat" target="_blank" class="">
 			<Icon icon="akar-icons:github-fill" color="white" class="w-20 h-20" />
 		</a>
