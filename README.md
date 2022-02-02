@@ -30,7 +30,7 @@
 
 Greetings, I'm Samithiwat Boonchai, a 2nd-year Computer Engineering student, Chulalongkorn University.
 
-I'm a back-end and devops engineering, mostly backend stuff, ambitious in software engineering. I love to collabor with the others. At this time I'm looking for a part time job please contact me if you are interesting I hope experience and skill are exactly that your company looking for.
+I'm a back-end and devops engineering, mostly backend stuff, ambitious in software engineering. I love to collabor with the others. At this time I'm looking for a part time job please contact me if you are interesting I hope experience and skill are exactly that you are looking for.
 
 ## Programming Languages
 
@@ -90,7 +90,7 @@ I'm a back-end and devops engineering, mostly backend stuff, ambitious in softwa
 
 <span>
 <a href="https://kubernetes.io" target="_blank">
-    <img src="https://img.shields.io/badge/kubernetes.js-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white">
+    <img src="https://img.shields.io/badge/kubernetes-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white">
 </a>
 <a href="https://www.docker.com" target="_blank">
     <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white">
