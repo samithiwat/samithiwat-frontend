@@ -1,6 +1,14 @@
+<p align="right">
+    <img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fsamithiwat.dev">
+    <img src="https://visitor-badge.glitch.me/badge?page_id=samithiwat.samithiwat">
+</p>
+
 ![header](./assets/header.png)
 
 <p align="center">
+  <a href="https://samithiwat.dev" target="_blank">
+    <img src="https://img.shields.io/badge/my_website-131919?style=for-the-badge&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAPFBMVEUAAAD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FYSWgTAAAAE3RSTlMAECA%2FQE9QX2Bvf4CfoK%2B%2Fz9%2FvlrXBLwAAAUNJREFUeNrNlGmawyAIhsHsDiMl3v%2BuA0Y65On%2Br28XqH4uUAh8DzhvpOQR4Rkz1yu8PJZJPSH3pViqs7tDCW5IbTu56FfOdvLxO93V7QuoETi%2BV4nKqGOEVY3ebFQzQmJTIkTILqSW24ZtS1bzq8MFAmsfSG1DZVMHj4V1DkKxy%2FQFZgHV2czuOnPe8EKKaEDUMIFZy8IEDtensOuwvsADHy0UUrg7SnG3hLOz3gyMWQeh4%2FHDbmEdkF9jCyGKz2s45ELPaj4Ls88GIT0WlpPw8vho%2FhduHsz6IJjslR1TEdLD7gyfJvztvxCm50UReswEeC3DUJhJeiJCONxvmyEUJvuGTnncCgQRbM2V2m1H6D2G%2FKgN5WhX7O26P27sKrZJ%2FrEsPHgAqJLqDQXhHqucZTLDI9b42JvgGThkUrYJ4Wv4AxeSLeoFswQCAAAAAElFTkSuQmCC&logoColor=white">
+  </a>
   <a href="https://github.com/samithiwat" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
   </a>
