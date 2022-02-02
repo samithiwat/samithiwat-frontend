@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PagePath } from 'src/common/types/path';
+	import type { PagePath } from '$lib/common/types/path';
 
 	export let paths: PagePath[];
 	export let currentPath: string;

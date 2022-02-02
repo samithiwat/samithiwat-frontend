@@ -14,7 +14,7 @@
 	import { onMount } from 'svelte';
 	import Nav from '$lib/components/common/Nav.svelte';
 	import '../app.css';
-	import { paths } from '../common/constant/path';
+	import { paths } from '$lib/common/constant/path';
 
 	export let currentPath: string;
 
