@@ -116,11 +116,11 @@
 	};
 </script>
 
-<section class="bg-hero h-full w-full bg-cover relative">
+<section class="bg-hero bg-cover h-full w-full relative">
 	<div class="w-full h-full flex items-center justify-center absolute top-0 z-20">
 		<div class="flex flex-col">
-			<p class="text-8xl text-white font-semibold">Samithiwat Boonchai</p>
-			<p class="text-3xl text-gray-200 mx-auto">Backend Developer</p>
+			<p class="text-3xl sm:text-8xl text-white font-semibold">Samithiwat Boonchai</p>
+			<p class="text-sm sm:text-3xl text-gray-200 mx-auto">Backend Developer</p>
 		</div>
 	</div>
 	<Particles class="w-full h-full absolute top-0 z-10" options={config} />
