@@ -12,7 +12,7 @@
 <script lang="ts">
 	import { prefetchRoutes } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import Nav from '$lib/components/common/Nav.svelte';
+	import Nav from '$lib/components/common/Navbar/Nav.svelte';
 	import '../app.css';
 	import { paths } from '$lib/common/constant/path';
 
