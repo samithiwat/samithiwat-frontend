@@ -36,5 +36,5 @@
 			<Icon icon="bi:instagram" color="white" class="w-8 sm:w-20 2xl:w-24 h-8 sm:h-20 2xl:h-24" />
 		</a>
 	</span>
-	<h5 class="text-white text-xs sm:text-base 2xl:text-2xl">Follow me</h5>
+	<h5 class="text-white text-xs sm:text-base 2xl:text-2xl">Keep in touch with me</h5>
 </div>
