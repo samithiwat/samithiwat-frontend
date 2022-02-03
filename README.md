@@ -107,9 +107,11 @@ I'm a backend and DevOps engineering, mostly backend stuff, ambitious software e
 
 ## Github Stats
 
+![](https://github-readme-stats.vercel.app/api?username=samithiwat&hide=stars&count_private=true&show_icons=true&theme=monokai&custom_title=My%20Progress)
+
 <p align="left">
-    <img src="https://raw.githubusercontent.com/samithiwat/profile-decoration/blob/snake/github-contribution-grid-snake.gif"/>
-    <img src="https://github-readme-stats.vercel.app/api?username=samithiwat&hide=stars&count_private=true&show_icons=true&theme=monokai&custom_title=My%20Progress)"/>
     <img src="https://raw.githubusercontent.com/samithiwat/profile-decoration/master/profile-summary-card-output/monokai/2-most-commit-language.svg"/>
-    <img src="![](https://raw.githubusercontent.com/samithiwat/profile-decoration/master/profile-summary-card-output/monokai/0-profile-details.svg)"/>
+    <img src="https://raw.githubusercontent.com/samithiwat/profile-decoration/master/profile-summary-card-output/monokai/1-repos-per-language.svg"/>
+    <img src="https://raw.githubusercontent.com/samithiwat/profile-decoration/master/profile-summary-card-output/monokai/0-profile-details.svg"/>
+    <img src="https://github.com/samithiwat/profile-decoration/blob/snake/github-contribution-grid-snake.svg"/>
 </p>
