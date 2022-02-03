@@ -28,9 +28,9 @@
 
 # Hi there 👋
 
-Greetings, I'm Samithiwat Boonchai, a 2nd-year Computer Engineering student, Chulalongkorn University.
+Greetings, I'm Samithiwat Boonchai, a 2nd-year Computer Engineering student, at Chulalongkorn University.
 
-I'm a back-end and devops engineering, mostly backend stuff, ambitious in software engineering. I love to collabor with the others. At this time I'm looking for a part time job please contact me if you are interesting I hope experience and skill are exactly that you are looking for.
+I'm a backend and DevOps engineering, mostly backend stuff, ambitious software engineering. I love to collaborate with others. At this time I'm looking for a part-time job please contact me if you are interesting I hope experience and skill are exactly what you are looking for.
 
 ## Programming Languages
 
