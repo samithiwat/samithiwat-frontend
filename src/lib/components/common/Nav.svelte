@@ -6,7 +6,7 @@
 	export let currentPath: string;
 </script>
 
-<nav class="bg-black-1 w-full h-12 sm:flex sm:flex-row text-center items-center">
+<nav class="bg-black-1 w-full h-12 2xl:h-16 sm:flex sm:flex-row text-center items-center">
 	<Icon
 		icon="ic:baseline-menu"
 		color="white"
@@ -14,12 +14,12 @@
 	/>
 
 	<div class="w-full sm:w-min absolute sm:static my-2">
-		<a href="/" class="text-white sm:mx-20 text-2xl ">Samithiwat.dev</a>
+		<a href="/" class="text-white sm:mx-20 text-2xl 2xl:text-4xl">Samithiwat.dev</a>
 	</div>
 
 	<div class="h-12 font-Poppins flex flex-row justify-start items-center gap-x-7">
 		{#each paths as path}
-			<a href={path.path} class="text-white invisible sm:visible">{path.name}</a>
+			<a href={path.path} class="text-white 2xl:text-2xl invisible sm:visible">{path.name}</a>
 		{/each}
 	</div>
 </nav>
