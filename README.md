@@ -3,7 +3,7 @@
     <img src="https://visitor-badge.glitch.me/badge?page_id=samithiwat.samithiwat">
 </p>
 
-![header](./assets/header.png)
+![header](./assets/header.gif)
 
 <p align="center">
   <a href="https://samithiwat.dev" target="_blank">
