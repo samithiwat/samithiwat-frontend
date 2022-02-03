@@ -25,18 +25,20 @@ module.exports = {
 				Lato: ['Lato', 'sans-serif'],
 				Poppins: ['Poppins', 'sans-serif']
 			},
-			screen: {
-				// @media (min-width: <width> px) { ... }
-				xs: '400px',
-				sm: '640px',
-				md: '768px',
-				lg: '1024px',
-				xl: '1280px',
-				'2xl': '1536px'
-			},
 			spacing: {
 				100: '25rem'
 			}
+		},
+		screens: {
+			// @media (min-width: <width> px) { ... }
+			'mobile-s': '320px',
+			'mobile-m': '370px',
+			'mobile-l': '425px',
+			sm: '640px',
+			md: '768px',
+			lg: '1024px',
+			xl: '1280px',
+			'2xl': '1536px'
 		}
 	},
 	plugins: []
