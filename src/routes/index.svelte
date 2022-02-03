@@ -3,6 +3,10 @@
 	import Hero from '$lib/components/landing/Hero.svelte';
 </script>
 
+<svelte:head>
+	<title>Samithiwat.dev</title>
+</svelte:head>
+
 <div class="min-h-screen flex flex-col">
 	<Header />
 	<Hero />
