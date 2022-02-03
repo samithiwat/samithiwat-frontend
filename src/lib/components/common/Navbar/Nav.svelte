@@ -7,10 +7,11 @@
 
 	export let paths: PagePath[];
 	export let currentPath: string;
-	// let menuIcon: string = 'ic:baseline-menu';
 </script>
 
-<nav class="bg-black-1 w-full h-12 2xl:h-16 sm:flex sm:flex-row text-center items-center">
+<nav
+	class="bg-black-1 w-full h-16 mobile-m:h-12 2xl:h-16 flex sm:flex-row text-center items-center"
+>
 	<div
 		class="mx-3 my-2 absolute visible sm:invisible hover:cursor-pointer z-10"
 		on:click={() => {
