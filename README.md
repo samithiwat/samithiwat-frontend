@@ -1,6 +1,5 @@
 <p align="right">
     <img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fsamithiwat.dev">
-    <img src="https://visitor-badge.glitch.me/badge?page_id=samithiwat.samithiwat">
 </p>
 
 ![header](./assets/header.gif)
@@ -108,6 +107,11 @@ I'm a backend and DevOps engineering, mostly backend stuff, ambitious software e
 
 ## Github Stats
 
-[![Samithiwat's github stats](https://github-readme-stats.vercel.app/api?username=samithiwat&hide=stars&count_private=true&show_icons=true&theme=monokai&custom_title=My%20Progress)](https://github.com/anuraghazra/github-readme-stats)
+![](https://github-readme-stats.vercel.app/api?username=samithiwat&hide=stars&count_private=true&show_icons=true&theme=monokai&custom_title=My%20Progress)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=samithiwat&langs_count=8&layout=compact&theme=monokai)](https://github.com/anuraghazra/github-readme-stats)
+<p align="left">
+    <img src="https://raw.githubusercontent.com/samithiwat/profile-decoration/master/profile-summary-card-output/monokai/2-most-commit-language.svg"/>
+    <img src="https://raw.githubusercontent.com/samithiwat/profile-decoration/master/profile-summary-card-output/monokai/1-repos-per-language.svg"/>
+    <img src="https://raw.githubusercontent.com/samithiwat/profile-decoration/master/profile-summary-card-output/monokai/0-profile-details.svg"/>
+    <img src="https://github.com/samithiwat/profile-decoration/blob/snake/github-contribution-grid-snake.svg"/>
+</p>
