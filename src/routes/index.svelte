@@ -3,7 +3,6 @@
 	import Footer from '$lib/components/landing/Footer.svelte';
 	import GithubRepositories from '$lib/components/landing/GithubRepositories.svelte';
 	import Header from '$lib/components/landing/Header.svelte';
-	import Hero from '$lib/components/landing/Hero.svelte';
 	import Timeline from '$lib/components/landing/Timeline.svelte';
 </script>
 
@@ -15,6 +14,7 @@
 	<Header />
 	<AboutMe />
 	<GithubRepositories />
+	<Timeline />
 	<Footer />
 	<main class="grow" />
 </div>
