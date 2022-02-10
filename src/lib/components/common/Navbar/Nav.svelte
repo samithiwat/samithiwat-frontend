@@ -1,34 +1,32 @@
 <script lang="ts">
 	import type { PagePath } from '$lib/common/types/path';
 	import Icon from '@iconify/svelte';
-	import { toggleStore } from '$lib/stores/sidebar-store';
+	import { toggleStore } from '$lib/stores/sidebar.store';
 	import Sidebar from './Sidebar.svelte';
-	import { menuIconStore } from '$lib/stores/nav-store';
+	import { menuIconStore } from '$lib/stores/nav.store';
 
 	export let paths: PagePath[];
 	export let currentPath: string;
 </script>
 
-<nav
-	class="bg-black-1 w-full h-16 mobile-m:h-12 2xl:h-16 flex sm:flex-row text-center items-center"
->
+<nav class="flex h-16 w-full items-center bg-black text-center mobile-m:h-12 sm:flex-row 2xl:h-16">
 	<div
-		class="mx-3 my-2 absolute visible sm:invisible hover:cursor-pointer z-10"
+		class="visible absolute z-10 mx-3 my-2 hover:cursor-pointer sm:invisible"
 		on:click={() => {
 			menuIconStore.toggle();
 			toggleStore.toggle();
 		}}
 	>
-		<Icon icon={$menuIconStore} color="white" class="w-8 h-8" />
+		<Icon icon={$menuIconStore} color="white" class="h-8 w-8" />
 	</div>
 
-	<div class="w-full sm:w-min absolute sm:static my-2">
-		<a href="/" class="text-white sm:mx-20 text-2xl 2xl:text-4xl z-0">Samithiwat.dev</a>
+	<div class="absolute my-2 w-full sm:static sm:w-min">
+		<a href="/" class="z-0 text-2xl text-white sm:mx-20 2xl:text-4xl">Samithiwat.dev</a>
 	</div>
 
-	<div class="h-12 font-Poppins flex flex-row justify-start items-center gap-x-7">
+	<div class="flex h-12 flex-row items-center justify-start gap-x-7 font-Poppins">
 		{#each paths as path}
-			<a href={path.path} class="text-white 2xl:text-2xl invisible sm:visible">{path.name}</a>
+			<a href={path.path} class="invisible text-white sm:visible 2xl:text-2xl">{path.name}</a>
 		{/each}
 	</div>
 </nav>
