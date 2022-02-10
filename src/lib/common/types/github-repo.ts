@@ -3,6 +3,7 @@ export type Repository = {
 	author: string;
 	description: string;
 	url: string;
-	createdAt: string;
+	updatedAt: string;
+	time: string;
 	stars: number;
 };

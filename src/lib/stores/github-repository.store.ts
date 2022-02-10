@@ -1,4 +1,5 @@
-import type { SmallPhotoCardProps } from '$lib/common/types/small-photo-card';
+import { getRepositories } from '$lib/api/github';
+import type { Repository } from '$lib/common/types/github-repo';
 import { writable } from 'svelte/store';
 
 const createRightArrow = () => {
@@ -39,16 +40,48 @@ const createLeftArrow = () => {
 	};
 };
 
-const createSelecteCardClicked = () => {
-	const { subscribe, set, update } = writable<SmallPhotoCardProps>({
-		// index: -1,
-		// card: null
-	});
+const createRepositories = () => {
+	const { subscribe, set, update } = writable<Repository[]>([]);
+
+	const fetch = async () => {
+		const repositories = await getRepositories();
+		set(repositories);
+	};
+
+	return {
+		subscribe,
+		fetch,
+		update
+	};
 };
 
-const createDeseleteCardClicked = () => {
-	const { subscribe, set, update } = writable<number>(-1);
+const createDisplayRepositoriesCard = () => {
+	const { subscribe, set, update } = writable<Repository[]>([
+		{
+			name: 'Untitled',
+			author: 'unknown',
+			description: 'No description',
+			url: '#',
+			stars: 0,
+			updatedAt: '2020 01 01',
+			time: '12:00 AM'
+		}
+	]);
+
+	const setRepository = (repositories: Repository[], pos: number) => {
+		update(() => {
+			return repositories.slice(pos, pos + 4);
+		});
+	};
+
+	return {
+		subscribe,
+		setRepository,
+		set
+	};
 };
 
 export const rightArrowStore = createRightArrow();
 export const leftArrowStore = createLeftArrow();
+export const repositoriesStore = createRepositories();
+export const displayRepositoriesCardStore = createDisplayRepositoriesCard();
