@@ -17,7 +17,7 @@
 	}
 	@font-face {
 		font-family: 'MuseoModerno';
-		src: url('/fontsMuseoModerno//MuseoModerno-Bold.ttf');
+		src: url('/fonts/MuseoModerno/MuseoModerno-Bold.ttf');
 		font-weight: 700;
 	}
 	@font-face {
