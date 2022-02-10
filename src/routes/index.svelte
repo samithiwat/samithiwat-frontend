@@ -14,6 +14,7 @@
 <div class="flex min-h-screen flex-col bg-main">
 	<Header />
 	<AboutMe />
+	<GithubRepositories />
 	<Footer />
 	<main class="grow" />
 </div>
