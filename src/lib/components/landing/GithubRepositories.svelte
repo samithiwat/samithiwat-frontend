@@ -150,7 +150,7 @@
 							window.open($displayRepositoriesCardStore[selectedPos].url);
 						}}
 					>
-						Browse <Icon icon="bx:bx-link-external" /></button
+						View <Icon icon="bx:bx-link-external" /></button
 					>
 				</span>
 			</div>
