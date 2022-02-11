@@ -1,5 +1,7 @@
 import { getRepositories } from '$lib/api/github';
+import { GithubClassName } from '$lib/common/enums/github-repo';
 import type { Repository } from '$lib/common/interface/github-repo';
+import type { GithubCardProps } from '$lib/common/types/small-photo-card';
 import { writable } from 'svelte/store';
 
 const createRightArrow = () => {
@@ -41,11 +43,18 @@ const createLeftArrow = () => {
 };
 
 const createRepositories = () => {
-	const { subscribe, set, update } = writable<Repository[]>([]);
+	const { subscribe, set, update } = writable<GithubCardProps[]>([]);
 
 	const fetch = async () => {
 		const repositories = await getRepositories();
-		set(repositories);
+		const props: GithubCardProps[] = repositories.map((repo: Repository) => ({
+			cardClass: GithubClassName.CARD_DESELECTED,
+			titleColor: GithubClassName.TITLE_DESELECTED,
+			repository: repo
+		}));
+		props[0].cardClass = GithubClassName.CARD_SELECTED;
+		props[0].titleColor = GithubClassName.TITLE_SELECTED;
+		set(props);
 	};
 
 	return {
@@ -56,48 +65,11 @@ const createRepositories = () => {
 };
 
 const createDisplayRepositoriesCard = () => {
-	const { subscribe, set, update } = writable<Repository[]>([
-		{
-			name: 'Untitled',
-			author: 'unknown',
-			description: 'No description',
-			url: '#',
-			stars: 0,
-			updatedAt: '2020 01 01',
-			time: '12:00 AM'
-		},
-		{
-			name: 'Untitled',
-			author: 'unknown',
-			description: 'No description',
-			url: '#',
-			stars: 0,
-			updatedAt: '2020 01 01',
-			time: '12:00 AM'
-		},
-		{
-			name: 'Untitled',
-			author: 'unknown',
-			description: 'No description',
-			url: '#',
-			stars: 0,
-			updatedAt: '2020 01 01',
-			time: '12:00 AM'
-		},
-		{
-			name: 'Untitled',
-			author: 'unknown',
-			description: 'No description',
-			url: '#',
-			stars: 0,
-			updatedAt: '2020 01 01',
-			time: '12:00 AM'
-		}
-	]);
+	const { subscribe, set, update } = writable<GithubCardProps[]>([]);
 
-	const setRepository = (repositories: Repository[], pos: number) => {
+	const setRepository = (props: GithubCardProps[], offsetPos: number) => {
 		update(() => {
-			return repositories.slice(pos, pos + 4);
+			return props.slice(offsetPos, offsetPos + 4);
 		});
 	};
 
@@ -106,20 +78,6 @@ const createDisplayRepositoriesCard = () => {
 		setRepository,
 		set
 	};
-};
-
-const createCardProps = () => {
-	const { subscribe, set, update } = writable<{
-		rightArrow: string;
-		leftArrow: string;
-		repositories: Repository[];
-		pos: number;
-	}>({
-		rightArrow: 'bi:arrow-right-circle-fill',
-		leftArrow: 'bi:arrow-left-circle-fill',
-		repositories: [],
-		pos: 1
-	});
 };
 
 export const rightArrowStore = createRightArrow();
