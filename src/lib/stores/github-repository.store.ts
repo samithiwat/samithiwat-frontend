@@ -65,6 +65,33 @@ const createDisplayRepositoriesCard = () => {
 			stars: 0,
 			updatedAt: '2020 01 01',
 			time: '12:00 AM'
+		},
+		{
+			name: 'Untitled',
+			author: 'unknown',
+			description: 'No description',
+			url: '#',
+			stars: 0,
+			updatedAt: '2020 01 01',
+			time: '12:00 AM'
+		},
+		{
+			name: 'Untitled',
+			author: 'unknown',
+			description: 'No description',
+			url: '#',
+			stars: 0,
+			updatedAt: '2020 01 01',
+			time: '12:00 AM'
+		},
+		{
+			name: 'Untitled',
+			author: 'unknown',
+			description: 'No description',
+			url: '#',
+			stars: 0,
+			updatedAt: '2020 01 01',
+			time: '12:00 AM'
 		}
 	]);
 
@@ -79,6 +106,20 @@ const createDisplayRepositoriesCard = () => {
 		setRepository,
 		set
 	};
+};
+
+const createCardProps = () => {
+	const { subscribe, set, update } = writable<{
+		rightArrow: string;
+		leftArrow: string;
+		repositories: Repository[];
+		pos: number;
+	}>({
+		rightArrow: 'bi:arrow-right-circle-fill',
+		leftArrow: 'bi:arrow-left-circle-fill',
+		repositories: [],
+		pos: 1
+	});
 };
 
 export const rightArrowStore = createRightArrow();
