@@ -89,7 +89,9 @@ h6 {
 
 	.btn-white {
 		@apply bg-white
-		text-black hover:bg-mint-gradian hover:text-white;
+		text-black
+		hover:bg-mint-gradian
+		hover:text-white;
 	}
 
 	.btn-mint {
