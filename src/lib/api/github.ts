@@ -14,12 +14,14 @@ const getRepositories = async (): Promise<Repository[]> => {
 	try {
 		const response: AxiosResponse = await client.get('/users/samithiwat/repos');
 		return response.data.map((repo: any) => ({
+			id: repo.id,
 			name: repo.name,
 			author: repo.owner.login,
 			description: repo.description,
 			url: repo.html_url,
 			stars: repo.stargazers_count,
-			updatedAt: moment(repo.updated_at).format('DD MMM YYYY'),
+			updatedAt: repo.updated_at,
+			date: moment(repo.updated_at).format('DD MMM YYYY'),
 			time: moment(repo.updated_at).format('HH:mm A')
 		}));
 	} catch (error) {
