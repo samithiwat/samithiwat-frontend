@@ -1,3 +1,5 @@
+import type { Repository } from '../interface/github-repo';
+
 export type SmallPhotoCardProps = {
 	title?: string;
 	desc?: string;
@@ -6,16 +8,13 @@ export type SmallPhotoCardProps = {
 	height?: number;
 	width?: number;
 	src?: string;
-	imgResolution?: number;
-	padding?: number;
-	titleSize?: number;
-	descriptionSize?: number;
-	dateAndTimeSize?: number;
-	titleHeight?: number;
-	descriptionHeight?: number;
-	dateAndTimeHeight?: number;
 	pos?: number;
-	isClicked?: boolean;
 	cardClass?: string;
 	titleColor?: string;
+};
+
+export type GithubCardProps = {
+	repository: Repository;
+	cardClass: string;
+	titleColor: string;
 };
