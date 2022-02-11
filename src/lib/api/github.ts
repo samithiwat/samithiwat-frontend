@@ -1,4 +1,4 @@
-import type { Repository } from '$lib/common/types/github-repo';
+import type { Repository } from '$lib/common/interface/github-repo';
 import Axios, { AxiosInstance, AxiosResponse } from 'axios';
 import moment from 'moment';
 

@@ -1,4 +1,4 @@
-export type Repository = {
+export interface Repository {
 	name: string;
 	author: string;
 	description: string;
@@ -6,4 +6,4 @@ export type Repository = {
 	updatedAt: string;
 	time: string;
 	stars: number;
-};
+}

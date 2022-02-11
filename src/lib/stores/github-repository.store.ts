@@ -1,5 +1,5 @@
 import { getRepositories } from '$lib/api/github';
-import type { Repository } from '$lib/common/types/github-repo';
+import type { Repository } from '$lib/common/interface/github-repo';
 import { writable } from 'svelte/store';
 
 const createRightArrow = () => {
