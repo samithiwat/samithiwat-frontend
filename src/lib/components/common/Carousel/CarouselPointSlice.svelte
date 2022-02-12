@@ -9,10 +9,10 @@
 </script>
 
 <div
-	class="absolute flex h-full w-full flex-row items-end justify-center py-3"
+	class="absolute z-10 flex h-full w-full flex-row items-end justify-center py-3"
 	style="column-gap:{width / 3}px"
 >
-	{#each images as image, pos}
+	{#each { length: images.length } as _, pos}
 		{#key selectedPos}
 			{#if pos === selectedPos}
 				<CarouselPoint color={Status.ACTIVE} {width} />
