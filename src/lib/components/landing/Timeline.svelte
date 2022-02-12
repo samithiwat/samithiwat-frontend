@@ -1,52 +1,32 @@
 <script lang="ts">
 	import { Modal } from '$lib/common/enums/modal';
-
-	import { modalStatusStore } from '$lib/stores/modal.store';
-
+	import { modalCarouselPropsStore, modalStatusStore } from '$lib/stores/modal.store';
+	import { timelineProps } from '$lib/stores/timeline.store';
+	import type { TimelineCardProps } from '$lib/common/types/card';
 	import Icon from '@iconify/svelte';
 	import MediumPhotoCard from '../common/Card/MediumPhotoCard.svelte';
 	import Circle from '../common/Icon/Circle.svelte';
 
 	$: y = 0;
-	const leftTimeline = [
-		{
-			title: 'SECONDARY SCHOOL',
-			desc: 'MAY 2014',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-high-school.jpg'
-		},
-		{
-			title: 'UNIVERSITY',
-			desc: 'AUGUST 2020',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu.jpg'
-		},
-		{
-			title: 'SUMMER INTERNSHIP',
-			desc: 'MAY 2021',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-MCV-Background.svg'
-		}
-	];
-	const rightTimeline = [
-		{
-			title: 'PRIMARY SCHOOL',
-			desc: 'MAY 2008',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-primary-school.jpg'
-		},
-		{
-			title: 'GRADUATED',
-			desc: 'APRIL 2019',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-graduated.png'
-		},
-		{
-			title: 'THINC CLUB',
-			desc: 'AUGUST 2020',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-Thinc-Background.svg'
-		},
-		{
-			title: 'SGCU 64',
-			desc: 'JULY 2021',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg'
-		}
-	];
+	const leftTimeline: TimelineCardProps[] = $timelineProps.filter(
+		(item: TimelineCardProps) => item.timelineData.id % 2 === 0
+	);
+	const rightTimeline: TimelineCardProps[] = $timelineProps.filter(
+		(item: TimelineCardProps) => item.timelineData.id % 2 !== 0
+	);
+
+	function handleModalOpen(e: CustomEvent) {
+		const { id } = e.detail;
+		modalStatusStore.open(Modal.CAROUSEL);
+		const props = $timelineProps.filter(
+			(item: TimelineCardProps) => item.timelineData.id === id
+		)[0];
+		modalCarouselPropsStore.setModalContent(
+			props.timelineData.name,
+			props.timelineData.description,
+			props.timelineData.images
+		);
+	}
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -68,12 +48,13 @@
 				<h5>Present</h5>
 			</div>
 			<div class="z-20 flex h-full w-full flex-col items-center gap-y-[15.625rem] py-100">
-				{#each leftTimeline as { title, desc, imgUrl }}
+				{#each leftTimeline as item}
 					<MediumPhotoCard
-						{title}
-						{desc}
-						src={imgUrl}
-						on:click={() => modalStatusStore.open(Modal.CAROUSEL)}
+						id={item.timelineData.id}
+						title={item.timelineData.name}
+						desc={item.date}
+						src={item.timelineData.thumbnail}
+						on:click={handleModalOpen}
 					/>
 				{/each}
 			</div>
@@ -100,12 +81,13 @@
 				</Circle>
 			</div>
 			<div class="z-20 flex h-full w-full flex-col items-center gap-y-[15.625rem] py-16">
-				{#each rightTimeline as { title, desc, imgUrl }}
+				{#each rightTimeline as item}
 					<MediumPhotoCard
-						{title}
-						{desc}
-						src={imgUrl}
-						on:click={() => modalStatusStore.open(Modal.CAROUSEL)}
+						id={item.timelineData.id}
+						title={item.timelineData.name}
+						desc={item.date}
+						src={item.timelineData.thumbnail}
+						on:click={handleModalOpen}
 					/>
 				{/each}
 			</div>
