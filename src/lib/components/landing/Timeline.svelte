@@ -61,13 +61,13 @@
 			TIMELINE
 		</span>
 		<hr class="w-[62.5rem] border-2" />
-		<div class="relative my-24 flex h-[165rem] w-full flex-row items-center justify-center py-10">
+		<div class="relative my-24 flex h-[165rem] w-full flex-row items-center justify-center">
 			<div class="absolute flex h-full w-full flex-col items-center gap-y-3 font-MuseoModerno ">
 				<h5>Born</h5>
 				<div class="z-0 h-full w-5 rounded-xl bg-white" />
 				<h5>Present</h5>
 			</div>
-			<div class="z-20 flex h-full w-full flex-col items-center gap-y-60 py-[27rem]">
+			<div class="z-20 flex h-full w-full flex-col items-center gap-y-[15.625rem] py-100">
 				{#each leftTimeline as { title, desc, imgUrl }}
 					<MediumPhotoCard
 						{title}
@@ -99,7 +99,7 @@
 					<img src="svg/sgcu_logo.svg" alt="sgcu logo" class="h-20 w-20" />
 				</Circle>
 			</div>
-			<div class="z-20 flex h-full w-full flex-col items-center gap-y-60 py-20">
+			<div class="z-20 flex h-full w-full flex-col items-center gap-y-[15.625rem] py-16">
 				{#each rightTimeline as { title, desc, imgUrl }}
 					<MediumPhotoCard
 						{title}

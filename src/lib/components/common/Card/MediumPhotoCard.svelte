@@ -7,7 +7,7 @@
 	export let width = 480;
 	export let src =
 		'https://storage.googleapis.com/fe-camp/profile-Smity-Binchu-d84d3b57e7eb5825b283680462fea9a9e17caa54bb094835f3d1d0d2b5837632.jpg';
-	let imgHeight = 0.63 * height;
+	let imgHeight = 0.6 * height;
 	let imgWidth = 0.9 * width;
 	let padding = 0.077 * height;
 	let titleSize = 0.07 * height;
