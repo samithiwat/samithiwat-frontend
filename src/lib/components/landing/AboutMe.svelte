@@ -6,7 +6,7 @@
 	<div
 		class="flex h-200 w-350 flex-col rounded-[2.5rem] bg-gray-primary p-32 font-Poppins text-6xl"
 	>
-		<span class="flex">
+		<span class="flex select-none">
 			<p
 				class="bg-gradient-to-r from-mint-gradian via-purple-gradian to-red-gradian bg-clip-text font-bold text-transparent"
 			>
@@ -19,7 +19,7 @@
 				<div
 					class="my-5 h-100 w-100 rounded-2xl border-[18px] border-yellow-card bg-about-me bg-cover bg-center"
 				/>
-				<span class="flex flex-row gap-x-2 text-white">
+				<span class="flex select-none flex-row gap-x-2 text-white">
 					<Icon icon="cil:birthday-cake" class=" h-5 w-5" />
 					<p class="text-base">27 June 2001</p>
 				</span>

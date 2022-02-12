@@ -19,7 +19,7 @@
 	let dateAndTimeHeight = 0.093 * width;
 
 	export let pos = 0;
-	export let cardClass = 'card small-card text-gray-secondary';
+	export let cardClass = 'card small-card text-gray-secondary select-none';
 	export let titleColor = 'text-gray-primary';
 
 	const dispatch = createEventDispatcher();
