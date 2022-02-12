@@ -1,6 +1,7 @@
 import type { Repository } from '../interface/github-repo';
 
 export type SmallPhotoCardProps = {
+	id?: number;
 	title?: string;
 	desc?: string;
 	date?: string;
@@ -8,7 +9,7 @@ export type SmallPhotoCardProps = {
 	height?: number;
 	width?: number;
 	src?: string;
-	pos?: number;
+};
 	cardClass?: string;
 	titleColor?: string;
 };

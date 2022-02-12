@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 
+	export let id;
 	export let title = 'Lorem ipsum';
 	export let desc = 'Maecenas porttito4';
 	export let height = 450;
@@ -21,7 +22,7 @@
 <div
 	class="card medium-card select-none"
 	style="height:{height}px; width:{width}px; padding: {padding}px"
-	on:click={() => dispatch('click')}
+	on:click={() => dispatch('click', { id })}
 >
 	<div class="flex w-full items-center justify-center">
 		<img
