@@ -23,13 +23,21 @@
 		}, 4000);
 	});
 
-	function handleChangePic(direction: Direction) {
+	function handlePointClick(e: CustomEvent) {
+		let pos = e.detail.pos;
+		handleChangePic(Direction.NONE, pos);
+	}
+
+	function handleChangePic(direction: Direction, idx?: number) {
 		switch (direction) {
 			case Direction.LEFT:
 				currentImageIdx = currentImageIdx === 0 ? images.length - 1 : currentImageIdx - 1;
 				break;
 			case Direction.RIGHT:
 				currentImageIdx = currentImageIdx === images.length - 1 ? 0 : currentImageIdx + 1;
+				break;
+			default:
+				currentImageIdx = idx;
 				break;
 		}
 
@@ -42,7 +50,12 @@
 
 <div class="relative flex items-center text-white">
 	{#key currentImageIdx}
-		<CarouselPointSlice {images} width={pointWidth} selectedPos={currentImageIdx} />
+		<CarouselPointSlice
+			{images}
+			width={pointWidth}
+			selectedPos={currentImageIdx}
+			on:click={handlePointClick}
+		/>
 		<div class="absolute flex h-full w-full flex-row justify-between">
 			<div
 				class="z-30 flex h-full items-center rounded-l-xl bg-black px-3 opacity-0 hover:cursor-pointer hover:opacity-20"
