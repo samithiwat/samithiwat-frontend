@@ -7,5 +7,5 @@ export type ModalProps = {
 };
 
 export type ModalImageProps = {
-	src: string;
+	imgUrl: string;
 };
