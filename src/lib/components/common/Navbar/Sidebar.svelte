@@ -7,7 +7,7 @@
 
 {#if $toggleStore}
 	<aside
-		class="absolute z-30 flex h-full w-2/3 flex-col items-center gap-y-5 pt-8 font-Poppins"
+		class="absolute z-30 flex h-full w-2/3 select-none flex-col items-center gap-y-5 pt-8 font-Poppins"
 		style="background-color:rgba(0, 0, 0, 0.85)"
 		transition:fly={{ x: -300, duration: 500 }}
 	>

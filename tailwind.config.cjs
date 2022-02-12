@@ -2,6 +2,10 @@ module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			animation: {
+				wiggle: 'wiggle 1s ease-in-out infinite',
+				'spin-slow': 'spin 10s linear infinite'
+			},
 			backgroundImage: {
 				footer: "url('/images/background/footer-bg.png')",
 				hero: "url('/images/background/hero-bg.png')",
@@ -15,13 +19,15 @@ module.exports = {
 			},
 			colors: {
 				yellow: {
+					icon: '#F3CC3B',
 					card: '#FFFBEC'
 				},
 				red: {
 					gradian: '#EB5757'
 				},
 				blue: {
-					primary: '#088CDA'
+					primary: '#088CDA',
+					icon: '#357FA9'
 				},
 				mint: {
 					primary: '#18CDCA',
@@ -32,17 +38,25 @@ module.exports = {
 					gradian: '#4F80E1'
 				},
 				pink: {
-					primary: '#FFBFBF'
+					primary: '#FFBFBF',
+					'sgcu-icon': '#ED0387'
 				},
 				gray: {
 					primary: '#373A3C',
-					secondary: '#BDBDBD'
+					secondary: '#BDBDBD',
+					icon: '#6D6D6D'
 				}
 			},
 			fontFamily: {
 				MuseoModerno: ['MuseoModerno', 'san-serif'],
 				Lato: ['Lato', 'sans-serif'],
 				Poppins: ['Poppins', 'sans-serif']
+			},
+			keyframes: {
+				wiggle: {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				}
 			},
 			spacing: {
 				100: '25rem',

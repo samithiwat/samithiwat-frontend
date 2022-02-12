@@ -9,7 +9,9 @@
 	export let currentPath: string;
 </script>
 
-<nav class="flex h-16 w-full items-center bg-black text-center mobile-m:h-12 sm:flex-row 2xl:h-16">
+<nav
+	class="flex h-16 w-full select-none items-center bg-black text-center mobile-m:h-12 sm:flex-row 2xl:h-16"
+>
 	<div
 		class="visible absolute z-10 mx-3 my-2 hover:cursor-pointer sm:invisible"
 		on:click={() => {
