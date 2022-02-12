@@ -2,6 +2,10 @@ module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			animation: {
+				wiggle: 'wiggle 1s ease-in-out infinite',
+				'spin-slow': 'spin 10s linear infinite'
+			},
 			backgroundImage: {
 				footer: "url('/images/background/footer-bg.png')",
 				hero: "url('/images/background/hero-bg.png')",
@@ -47,6 +51,12 @@ module.exports = {
 				MuseoModerno: ['MuseoModerno', 'san-serif'],
 				Lato: ['Lato', 'sans-serif'],
 				Poppins: ['Poppins', 'sans-serif']
+			},
+			keyframes: {
+				wiggle: {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				}
 			},
 			spacing: {
 				100: '25rem',
