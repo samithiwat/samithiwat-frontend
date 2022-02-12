@@ -7,7 +7,15 @@ export type ModalProps = {
 };
 
 export type ModalImageProps = {
+	name: string;
+	description: string;
 	imgUrl: string;
+};
+
+export type ModalCarousel = ModalProps & {
+	title: string;
+	content: string;
+	images: ModalImageProps[];
 };
 
 export type ModalStatus = {

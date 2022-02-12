@@ -9,9 +9,21 @@
 	export let height = 250;
 	export let width = 650;
 	export let images: ModalImageProps[] = [
-		{ imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-Thinc-Background.svg' },
-		{ imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-MCV-Background.svg' },
-		{ imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg' }
+		{
+			name: '',
+			description: '',
+			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-Thinc-Background.svg'
+		},
+		{
+			name: '',
+			description: '',
+			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-MCV-Background.svg'
+		},
+		{
+			name: '',
+			description: '',
+			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg'
+		}
 	];
 	let pointWidth = width / 5 / images.length;
 	let currentImageIdx = 0;
@@ -41,35 +53,39 @@
 				break;
 		}
 
-		clearInterval(counter);
-		counter = setInterval(() => {
-			handleChangePic(Direction.RIGHT);
-		}, 4000);
+		if (images.length > 0) {
+			clearInterval(counter);
+			counter = setInterval(() => {
+				handleChangePic(Direction.RIGHT);
+			}, 4000);
+		}
 	}
 </script>
 
 <div class="relative flex items-center text-white">
 	{#key currentImageIdx}
-		<CarouselPointSlice
-			{images}
-			width={pointWidth}
-			selectedPos={currentImageIdx}
-			on:click={handlePointClick}
-		/>
-		<div class="absolute flex h-full w-full flex-row justify-between">
-			<div
-				class="z-30 flex h-full items-center rounded-l-xl bg-black px-3 opacity-0 hover:cursor-pointer hover:opacity-20"
-				on:click={() => handleChangePic(Direction.LEFT)}
-			>
-				<Icon icon="dashicons:arrow-left-alt2" class="h-10 w-10 " />
+		{#if images.length > 0}
+			<CarouselPointSlice
+				{images}
+				width={pointWidth}
+				selectedPos={currentImageIdx}
+				on:click={handlePointClick}
+			/>
+			<div class="absolute flex h-full w-full flex-row justify-between">
+				<div
+					class="z-30 flex h-full items-center rounded-l-xl bg-black px-3 opacity-0 hover:cursor-pointer hover:opacity-20"
+					on:click={() => handleChangePic(Direction.LEFT)}
+				>
+					<Icon icon="dashicons:arrow-left-alt2" class="h-10 w-10 " />
+				</div>
+				<div
+					class="z-30 flex h-full items-center rounded-r-xl bg-black px-3 opacity-0 hover:cursor-pointer hover:opacity-20"
+					on:click={() => handleChangePic(Direction.RIGHT)}
+				>
+					<Icon icon="dashicons:arrow-right-alt2" class="h-10 w-10" />
+				</div>
 			</div>
-			<div
-				class="z-30 flex h-full items-center rounded-r-xl bg-black px-3 opacity-0 hover:cursor-pointer hover:opacity-20"
-				on:click={() => handleChangePic(Direction.RIGHT)}
-			>
-				<Icon icon="dashicons:arrow-right-alt2" class="h-10 w-10" />
-			</div>
-		</div>
+		{/if}
 		<img
 			src={images[currentImageIdx].imgUrl}
 			alt="Carousel"
