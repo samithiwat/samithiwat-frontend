@@ -9,7 +9,9 @@
 	export let currentPath: string;
 </script>
 
-<nav class="flex h-16 w-full items-center bg-black text-center mobile-m:h-12 sm:flex-row 2xl:h-16">
+<nav
+	class="flex h-16 w-full select-none items-center bg-black text-center mobile-m:h-12 sm:flex-row 2xl:h-16"
+>
 	<div
 		class="visible absolute z-10 mx-3 my-2 hover:cursor-pointer sm:invisible"
 		on:click={() => {
@@ -26,7 +28,13 @@
 
 	<div class="flex h-12 flex-row items-center justify-start gap-x-7 font-Poppins">
 		{#each paths as path}
-			<a href={path.path} class="invisible text-white sm:visible 2xl:text-2xl">{path.name}</a>
+			{#if path.path === currentPath}
+				<a href={path.path} class="invisible text-white underline sm:visible 2xl:text-2xl"
+					>{path.name}</a
+				>
+			{:else}
+				<a href={path.path} class="invisible text-white sm:visible 2xl:text-2xl">{path.name}</a>
+			{/if}
 		{/each}
 	</div>
 </nav>

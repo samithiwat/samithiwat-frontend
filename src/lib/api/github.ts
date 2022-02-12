@@ -1,4 +1,4 @@
-import type { Repository } from '$lib/common/interface/github-repo';
+import type { GithubRepository, Repository } from '$lib/common/interface/github-repo';
 import Axios, { AxiosInstance, AxiosResponse } from 'axios';
 import moment from 'moment';
 
@@ -13,7 +13,7 @@ const client: AxiosInstance = Axios.create({
 const getRepositories = async (): Promise<Repository[]> => {
 	try {
 		const response: AxiosResponse = await client.get('/users/samithiwat/repos');
-		return response.data.map((repo: any) => ({
+		return response.data.map((repo: GithubRepository) => ({
 			id: repo.id,
 			name: repo.name,
 			author: repo.owner.login,

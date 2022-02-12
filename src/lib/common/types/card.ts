@@ -13,6 +13,14 @@ export type SmallPhotoCardProps = {
 	titleColor?: string;
 };
 
+export type MediumPhotoCardProps = {
+	title?: number;
+	desc?: number;
+	height?: number;
+	width?: number;
+	src?: string;
+};
+
 export type GithubCardProps = {
 	repository: Repository;
 	cardClass: string;

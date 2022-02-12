@@ -1,7 +1,7 @@
 import { getRepositories } from '$lib/api/github';
 import { GithubClassName } from '$lib/common/enums/github-repo';
 import type { Repository } from '$lib/common/interface/github-repo';
-import type { GithubCardProps } from '$lib/common/types/small-photo-card';
+import type { GithubCardProps } from '$lib/common/types/card';
 import { writable } from 'svelte/store';
 
 const createRightArrow = () => {
