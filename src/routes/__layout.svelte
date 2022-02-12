@@ -15,7 +15,7 @@
 	import Nav from '$lib/components/common/Navbar/Nav.svelte';
 	import '../app.css';
 	import { paths } from '$lib/common/constant/path';
-	import { modalPropsStore, modalStatusStore } from '$lib/stores/modal.store';
+	import { modalCarouselPropsStore, modalStatusStore } from '$lib/stores/modal.store';
 	import ModalCarousel from '$lib/components/common/Modal/ModalCarousel.svelte';
 	import ModalRoot from '$lib/components/common/Modal/ModalRoot.svelte';
 
@@ -27,9 +27,11 @@
 </script>
 
 {#key $modalStatusStore}
-	{#if $modalStatusStore}
+	{#if $modalStatusStore.isOpen}
 		<ModalRoot on:close={() => modalStatusStore.close()}>
-			<ModalCarousel {...$modalPropsStore} />
+			{#if $modalStatusStore.carousel}
+				<ModalCarousel {...$modalCarouselPropsStore} />
+			{/if}
 		</ModalRoot>
 	{/if}
 {/key}

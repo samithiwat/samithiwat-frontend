@@ -1,7 +1,8 @@
-import type { ModalProps } from '$lib/common/types/modal';
+import { Modal } from '$lib/common/enums/modal';
+import type { ModalProps, ModalStatus } from '$lib/common/types/modal';
 import { writable } from 'svelte/store';
 
-const createModalProps = () => {
+const createModalCarouselProps = () => {
 	const { subscribe, set, update } = writable<ModalProps>({
 		height: 650,
 		width: 800,
@@ -18,9 +19,31 @@ const createModalProps = () => {
 };
 
 const createModalStatus = () => {
-	const { subscribe, set, update } = writable<boolean>(false);
-	const open = () => update(() => true);
-	const close = () => update(() => false);
+	const { subscribe, set, update } = writable<ModalStatus>({
+		carousel: false,
+		isOpen: false
+	});
+	const open = (type: Modal) => {
+		update(() => {
+			const result = {
+				carousel: false,
+				isOpen: true
+			};
+			switch (type) {
+				case Modal.CAROUSEL:
+					result.carousel = true;
+					break;
+			}
+			return result;
+		});
+	};
+
+	const close = () =>
+		update(() => ({
+			carousel: false,
+			isOpen: false
+		}));
+
 	return {
 		subscribe,
 		open,
@@ -29,5 +52,5 @@ const createModalStatus = () => {
 	};
 };
 
-export const modalPropsStore = createModalProps();
+export const modalCarouselPropsStore = createModalCarouselProps();
 export const modalStatusStore = createModalStatus();

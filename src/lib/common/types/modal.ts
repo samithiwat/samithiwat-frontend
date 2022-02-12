@@ -9,3 +9,8 @@ export type ModalProps = {
 export type ModalImageProps = {
 	imgUrl: string;
 };
+
+export type ModalStatus = {
+	isOpen: boolean;
+	carousel: boolean;
+};

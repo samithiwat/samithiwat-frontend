@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+	import { Modal } from '$lib/common/enums/modal';
+
 	import { modalStatusStore } from '$lib/stores/modal.store';
 
 	import Icon from '@iconify/svelte';
@@ -67,7 +69,12 @@
 			</div>
 			<div class="z-20 flex h-full w-full flex-col items-center gap-y-60 py-[27rem]">
 				{#each leftTimeline as { title, desc, imgUrl }}
-					<MediumPhotoCard {title} {desc} src={imgUrl} on:click={() => modalStatusStore.open()} />
+					<MediumPhotoCard
+						{title}
+						{desc}
+						src={imgUrl}
+						on:click={() => modalStatusStore.open(Modal.CAROUSEL)}
+					/>
 				{/each}
 			</div>
 
@@ -94,7 +101,12 @@
 			</div>
 			<div class="z-20 flex h-full w-full flex-col items-center gap-y-60 py-20">
 				{#each rightTimeline as { title, desc, imgUrl }}
-					<MediumPhotoCard {title} {desc} src={imgUrl} on:click={() => modalStatusStore.open()} />
+					<MediumPhotoCard
+						{title}
+						{desc}
+						src={imgUrl}
+						on:click={() => modalStatusStore.open(Modal.CAROUSEL)}
+					/>
 				{/each}
 			</div>
 		</div>
