@@ -59,14 +59,14 @@
 		<span class="flex flex-row items-center gap-x-1" style="font-size: {dateAndTimeSize}px;">
 			<Icon
 				icon="ant-design:calendar-outlined"
-				style="width: {dateAndTimeSize}px; height: {dateAndTimeSize}px"
+				style="width: {dateAndTimeSize}px; height: {dateAndTimeHeight}px"
 			/>
 			<p>
 				{date}
 			</p>
 			<Icon
 				icon="ant-design:clock-circle-outlined"
-				style="width: {dateAndTimeSize}px; height: {dateAndTimeSize}px"
+				style="width: {dateAndTimeSize}px; height: {dateAndTimeHeight}px"
 			/>
 			<p>{time}</p>
 		</span>
