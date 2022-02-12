@@ -28,7 +28,13 @@
 
 	<div class="flex h-12 flex-row items-center justify-start gap-x-7 font-Poppins">
 		{#each paths as path}
-			<a href={path.path} class="invisible text-white sm:visible 2xl:text-2xl">{path.name}</a>
+			{#if path.path === currentPath}
+				<a href={path.path} class="invisible text-white underline sm:visible 2xl:text-2xl"
+					>{path.name}</a
+				>
+			{:else}
+				<a href={path.path} class="invisible text-white sm:visible 2xl:text-2xl">{path.name}</a>
+			{/if}
 		{/each}
 	</div>
 </nav>
