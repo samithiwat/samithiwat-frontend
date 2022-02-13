@@ -1,3 +1,5 @@
+import type { IconType } from '../enums/timeline';
+
 export interface Timeline {
 	id: number;
 	slug: string;
@@ -6,6 +8,9 @@ export interface Timeline {
 	thumbnail: string;
 	images: Image[];
 	eventDate: Date;
+	icon: string;
+	iconBgColor: string;
+	iconType: IconType;
 }
 
 export interface Image {
