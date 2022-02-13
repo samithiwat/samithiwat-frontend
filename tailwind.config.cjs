@@ -4,7 +4,12 @@ module.exports = {
 		extend: {
 			animation: {
 				wiggle: 'wiggle 1s ease-in-out infinite',
-				'spin-slow': 'spin 10s linear infinite'
+				'spin-slow': 'spin 10s linear infinite',
+				shakeY: 'shakeY 1.2s ease-in-out infinite',
+				shakeX: 'shakeX 1.2s ease-in-out infinite',
+				'shakeY-once': 'shakeY 1.2s ease-in-out',
+				'shakeX-once': 'shakeX 0.7s ease-in-out',
+				rubberBand: 'rubberBand 500ms ease-in-out'
 			},
 			backgroundImage: {
 				footer: "url('/images/background/footer-bg.png')",
@@ -57,6 +62,23 @@ module.exports = {
 				wiggle: {
 					'0%, 100%': { transform: 'rotate(-3deg)' },
 					'50%': { transform: 'rotate(3deg)' }
+				},
+				shakeY: {
+					'0%, 100%': { transform: 'translateY(-10px)' },
+					'50%': { transform: 'translateY(0px)' }
+				},
+				shakeX: {
+					'0%': { transform: 'translateX(10px)' },
+					'50%': { transform: 'translateX(-10px)' },
+					'100%': { transform: 'translateX(0px)' }
+				},
+				rubberBand: {
+					'0%, 100%': { transform: 'scale(1)' },
+					'30%': { transform: 'scale(1.25)' },
+					'40%': { transform: 'scale(0.75)' },
+					'50%': { transform: 'scale(1.15)' },
+					'65%': { transform: 'scale(0.95)' },
+					'75%': { transform: 'scale(1.05)' }
 				}
 			},
 			spacing: {
