@@ -39,7 +39,8 @@ module.exports = {
 				},
 				pink: {
 					primary: '#FFBFBF',
-					'sgcu-icon': '#ED0387'
+					'sgcu-icon': '#ED0387',
+					'fecamp-icon': '#E37F7F'
 				},
 				gray: {
 					primary: '#373A3C',
