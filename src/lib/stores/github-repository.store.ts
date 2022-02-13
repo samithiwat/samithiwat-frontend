@@ -79,7 +79,8 @@ const createDisplayRepositoriesCard = () => {
 		set
 	};
 };
-
+export const selectedPos = writable<number>(0);
+export const offsetPos = writable<number>(0);
 export const rightArrowStore = createRightArrow();
 export const leftArrowStore = createLeftArrow();
 export const repositoriesStore = createRepositories();
