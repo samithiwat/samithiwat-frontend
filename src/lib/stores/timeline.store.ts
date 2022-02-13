@@ -211,7 +211,7 @@ const createTimelineProps = () => {
 				iconBgColor: Color.PINK_SGCU_ICON,
 				name: 'SGCU 64',
 				description:
-					'At the late summer of 2020, I got a chance join the SGCU 64 ISD team, I was working on the project called "CU The Journey" and "Dedicated Server" and currently doing a "Mind Market" as developer and "Loykathong" and "MC of Chula Contest" as a operator at livestream team.',
+					'In the late summer of 2021, I got a chance join the SGCU 64 ISD team, I was working on the project called "CU The Journey" and "Dedicated Server" and currently doing a "Mind Market" as developer and "Loykathong" and "MC of Chula Contest" as a operator at livestream team.',
 				eventDate: moment().toDate(),
 				slug: 'primary-school',
 				thumbnail: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg',
@@ -232,7 +232,7 @@ const createTimelineProps = () => {
 			}
 		},
 		{
-			date: 'JULY 2021',
+			date: 'DECEMBER 2021',
 			timelineData: {
 				id: 8,
 				icon: 'svg/fe_logo.svg',
@@ -240,7 +240,7 @@ const createTimelineProps = () => {
 				iconBgColor: Color.PINK_FECAMP_ICON,
 				name: 'FE CAMP',
 				description:
-					'At the late summer of 2020, I got a chance join the SGCU 64 ISD team, I was working on the project called "CU The Journey" and "Dedicated Server" and currently doing a "Mind Market" as developer and "Loykathong" and "MC of Chula Contest" as a operator at livestream team.',
+					"In the end of 2021, I got an invitation from my friend to be a Tech Lead of FE CAMP website team. I'm working on planing,creating a backlogs for team, review codes and merge them and also got a chance to be a devops using a Kubernetes for deploying the project and write a CI/CD pipeline.",
 				eventDate: moment().toDate(),
 				slug: 'primary-school',
 				thumbnail:
@@ -257,7 +257,7 @@ const createTimelineProps = () => {
 			}
 		},
 		{
-			date: 'JULY 2021',
+			date: 'DECEMBER 2021',
 			timelineData: {
 				id: 9,
 				icon: 'svg/nitad_logo.svg',
@@ -265,7 +265,7 @@ const createTimelineProps = () => {
 				iconBgColor: Color.YELLOW_CARD,
 				name: 'NITAD 18',
 				description:
-					'At the late summer of 2020, I got a chance join the SGCU 64 ISD team, I was working on the project called "CU The Journey" and "Dedicated Server" and currently doing a "Mind Market" as developer and "Loykathong" and "MC of Chula Contest" as a operator at livestream team.',
+					'In the end of 2021, It is a concurency of FE Camp, I got a chance to join the NITAD 18 in IT team. I working as a Backend Tech Lead and devops of this project. My job is almost same as FE Camp, creating backlogs, review code and merge it.',
 				eventDate: moment().toDate(),
 				slug: 'primary-school',
 				thumbnail: 'https://storage.googleapis.com/samithiwat-bucket/timeline-nitad-Background.svg',
