@@ -1,27 +1,28 @@
 import type { Repository } from '../interface/github-repo';
+import type { Timeline } from '../interface/timeline';
 
-export type SmallPhotoCardProps = {
+type Card = {
+	id?: number;
 	title?: string;
 	desc?: string;
-	date?: string;
-	time?: string;
 	height?: number;
 	width?: number;
-	src?: string;
-	pos?: number;
+	imgUrl?: string;
+};
+
+export type SmallPhotoCardProps = Card & {
 	cardClass?: string;
 	titleColor?: string;
 };
 
-export type MediumPhotoCardProps = {
-	title?: number;
-	desc?: number;
-	height?: number;
-	width?: number;
-	src?: string;
+export type MediumPhotoCardProps = Card;
+
+export type TimelineCardProps = MediumPhotoCardProps & {
+	date: string;
+	timelineData: Timeline;
 };
 
-export type GithubCardProps = {
+export type GithubCardProps = SmallPhotoCardProps & {
 	repository: Repository;
 	cardClass: string;
 	titleColor: string;

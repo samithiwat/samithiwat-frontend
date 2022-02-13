@@ -1,110 +1,87 @@
-<script>
-	import { modalStatusStore } from '$lib/stores/modal.store';
-
+<script lang="ts">
+	import { Modal } from '$lib/common/enums/modal';
+	import { modalCarouselPropsStore, modalStatusStore } from '$lib/stores/modal.store';
+	import type { TimelineCardProps } from '$lib/common/types/card';
 	import Icon from '@iconify/svelte';
 	import MediumPhotoCard from '../common/Card/MediumPhotoCard.svelte';
 	import Circle from '../common/Icon/Circle.svelte';
+	import { IconType } from '$lib/common/enums/timeline';
+	import { timelineProps } from '$lib/stores/timeline.store';
 
-	$: y = 0;
-	const leftTimeline = [
-		{
-			title: 'SECONDARY SCHOOL',
-			desc: 'MAY 2014',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-high-school.jpg'
-		},
-		{
-			title: 'UNIVERSITY',
-			desc: 'AUGUST 2020',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu.jpg'
-		},
-		{
-			title: 'SUMMER INTERNSHIP',
-			desc: 'MAY 2021',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-MCV-Background.svg'
-		}
-	];
-	const rightTimeline = [
-		{
-			title: 'PRIMARY SCHOOL',
-			desc: 'MAY 2008',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-primary-school.jpg'
-		},
-		{
-			title: 'GRADUATED',
-			desc: 'APRIL 2019',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-graduated.png'
-		},
-		{
-			title: 'THINC CLUB',
-			desc: 'AUGUST 2020',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-Thinc-Background.svg'
-		},
-		{
-			title: 'SGCU 64',
-			desc: 'JULY 2021',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg'
-		}
-	];
+	function handleModalOpen(e: CustomEvent) {
+		const { id } = e.detail;
+		modalStatusStore.open(Modal.CAROUSEL);
+		const props = $timelineProps.filter(
+			(item: TimelineCardProps) => item.timelineData.id === id
+		)[0];
+		modalCarouselPropsStore.setModalContent(
+			props.timelineData.name,
+			props.timelineData.description,
+			props.timelineData.images
+		);
+	}
+
+	const nProps = $timelineProps.length;
+	let height = nProps * 450 + 50 * (nProps - 1) + 500;
 </script>
-
-<svelte:window bind:scrollY={y} />
 
 <div class="flex justify-center font-Poppins">
 	<div
-		class="flex h-[190rem] w-350 flex-col items-center justify-center rounded-4xl bg-gray-primary py-8 text-white"
+		class="flex w-350 flex-col items-center justify-center gap-y-20 rounded-4xl bg-gray-primary py-20 text-white"
+		style="height: {height}px;"
 	>
-		<span
-			class="flex bg-gradient-to-r from-mint-gradian via-purple-gradian to-red-gradian bg-clip-text text-9xl font-bold text-transparent"
-		>
-			TIMELINE
+		<span class="flex flex-col items-center">
+			<p
+				class="bg-gradient-to-r from-mint-gradian via-purple-gradian to-red-gradian bg-clip-text text-9xl font-bold text-transparent"
+			>
+				TIMELINE
+			</p>
+			<hr class="w-[62.5rem] border-2" />
 		</span>
-		<hr class="w-[62.5rem] border-2" />
-		<div class="relative my-24 flex h-[165rem] w-full flex-row items-center justify-center py-10">
-			<div class="absolute flex h-full w-full flex-col items-center gap-y-3 font-MuseoModerno ">
-				<h5>Born</h5>
-				<div class="z-0 h-full w-5 rounded-xl bg-white" />
-				<h5>Present</h5>
-			</div>
-			<div class="z-20 flex h-full w-full flex-col items-center gap-y-60 py-[27rem]">
-				{#each leftTimeline as { title, desc, imgUrl }}
-					<MediumPhotoCard {title} {desc} src={imgUrl} on:click={() => modalStatusStore.open()} />
-				{/each}
+
+		<div class="relative flex h-full w-full flex-col px-14">
+			<div class="flex flex-col items-center">
+				<div class="absolute h-full w-5 rounded-xl bg-white" />
+				<div class="absolute my-[12.5rem] flex flex-col gap-y-[21.875rem]">
+					{#each $timelineProps as item}
+						<Circle color={item.timelineData.iconBgColor}>
+							{#if item.timelineData.iconType === IconType.ICON}
+								<Icon icon={item.timelineData.icon} class="h-20 w-20 text-white" />
+							{:else}
+								<img src={item.timelineData.icon} alt="logo" class="h-20 w-20" />
+							{/if}
+						</Circle>
+					{/each}
+				</div>
 			</div>
 
-			<div class="z-10 flex flex-col gap-y-52">
-				<Circle color="bg-blue-icon">
-					<Icon icon="clarity:ruler-pencil-line" class="h-20 w-20 text-white" />
-				</Circle>
-				<Circle color="bg-yellow-icon"><Icon icon="bi:book" class="h-20 w-20 text-white" /></Circle>
-				<Circle color="bg-mint-primary">
-					<Icon icon="cil:education" class="h-20 w-20 text-white" />
-				</Circle>
-				<Circle color="bg-pink-primary">
-					<Icon icon="la:laptop-code" class="h-20 w-20 text-white" />
-				</Circle>
-				<Circle color="bg-gray-icon">
-					<img src="svg/thinc_logo.svg" alt="thinc logo" class="h-20 w-20" />
-				</Circle>
-				<Circle color="bg-white">
-					<img src="svg/courseville_logo.svg" alt="course ville logo" class="h-20 w-20" />
-				</Circle>
-				<Circle color="bg-pink-sgcu-icon">
-					<img src="svg/sgcu_logo.svg" alt="sgcu logo" class="h-20 w-20" />
-				</Circle>
-			</div>
-			<div class="z-20 flex h-full w-full flex-col items-center gap-y-60 py-20">
-				{#each rightTimeline as { title, desc, imgUrl }}
-					<MediumPhotoCard {title} {desc} src={imgUrl} on:click={() => modalStatusStore.open()} />
-				{/each}
+			<div class="flex h-full w-full flex-col items-center">
+				<div class="flex h-full w-full flex-col gap-y-[3.125rem] py-[3.125rem]">
+					{#each $timelineProps as item, pos}
+						{#if pos % 2 === 0}
+							<div class="flex w-full flex-row justify-end">
+								<MediumPhotoCard
+									id={item.timelineData.id}
+									title={item.timelineData.name}
+									desc={item.date}
+									src={item.timelineData.thumbnail}
+									on:click={handleModalOpen}
+								/>
+							</div>
+						{:else}
+							<div class="flex w-full flex-row justify-start">
+								<MediumPhotoCard
+									id={item.timelineData.id}
+									title={item.timelineData.name}
+									desc={item.date}
+									src={item.timelineData.thumbnail}
+									on:click={handleModalOpen}
+								/>
+							</div>
+						{/if}
+					{/each}
+				</div>
 			</div>
 		</div>
 	</div>
-	<!-- <div class="flex h-full w-36 flex-col items-center bg-pink-300 ">
-			<div class="w-5 bg-blue-400" style="height: {Math.max(y - 2100, 0)}px;" />
-		</div> -->
 </div>
-<!-- <h1
-		class="bg-gradient-to-r from-mint-gradian via-purple-gradian to-red-gradian bg-clip-text text-transparent"
-		>
-		You have scrolled down {y} pixels
-	</h1> -->

@@ -18,7 +18,7 @@
 	let descriptionHeight = 0.106 * width;
 	let dateAndTimeHeight = 0.093 * width;
 
-	export let pos = 0;
+	export let id = 0;
 	export let cardClass = 'card small-card text-gray-secondary select-none';
 	export let titleColor = 'text-gray-primary';
 
@@ -27,7 +27,7 @@
 		dispatch('click', {
 			cardClass,
 			titleColor,
-			pos
+			id
 		});
 	}
 </script>

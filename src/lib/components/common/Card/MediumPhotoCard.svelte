@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 
+	export let id: number;
 	export let title = 'Lorem ipsum';
 	export let desc = 'Maecenas porttito4';
 	export let height = 450;
 	export let width = 480;
 	export let src =
 		'https://storage.googleapis.com/fe-camp/profile-Smity-Binchu-d84d3b57e7eb5825b283680462fea9a9e17caa54bb094835f3d1d0d2b5837632.jpg';
-	let imgHeight = 0.63 * height;
+	let imgHeight = 0.6 * height;
 	let imgWidth = 0.9 * width;
 	let padding = 0.077 * height;
 	let titleSize = 0.07 * height;
@@ -21,7 +22,7 @@
 <div
 	class="card medium-card select-none"
 	style="height:{height}px; width:{width}px; padding: {padding}px"
-	on:click={() => dispatch('click')}
+	on:click={() => dispatch('click', { id })}
 >
 	<div class="flex w-full items-center justify-center">
 		<img
