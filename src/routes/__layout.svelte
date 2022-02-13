@@ -15,9 +15,9 @@
 	import Nav from '$lib/components/common/Navbar/Nav.svelte';
 	import '../app.css';
 	import { paths } from '$lib/common/constant/path';
-	import Modal from '$lib/components/common/Modal/Modal.svelte';
-	import { modalPropsStore, modalStatusStore } from '$lib/stores/modal.store';
-	import Carousel from '$lib/components/common/Carousel/Carousel.svelte';
+	import { modalCarouselPropsStore, modalStatusStore } from '$lib/stores/modal.store';
+	import ModalCarousel from '$lib/components/common/Modal/ModalCarousel.svelte';
+	import ModalRoot from '$lib/components/common/Modal/ModalRoot.svelte';
 
 	export let currentPath: string;
 
@@ -27,21 +27,12 @@
 </script>
 
 {#key $modalStatusStore}
-	{#if $modalStatusStore}
-		<Modal {...$modalPropsStore} on:close={() => modalStatusStore.close()}>
-			<Carousel />
-			<div class="h-1/3 w-4/5 items-center font-Poppins text-lg text-white ">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod sem at lectus
-					feugiat aliquam. Nam sodales eleifend fringilla. Aliquam non nunc viverra, suscipit dui
-					nec, faucibus arcu. Donec porttitor libero congue dictum porttitor. Etiam eu pulvinar
-					erat, at consectetur quam. Nunc ultricies vestibulum turpis id varius.
-				</p>
-			</div>
-			<div class="flex w-full justify-end px-20">
-				<button class="btn btn-white h-12 w-36">Read more</button>
-			</div>
-		</Modal>
+	{#if $modalStatusStore.isOpen}
+		<ModalRoot on:close={() => modalStatusStore.close()}>
+			{#if $modalStatusStore.carousel}
+				<ModalCarousel {...$modalCarouselPropsStore} />
+			{/if}
+		</ModalRoot>
 	{/if}
 {/key}
 

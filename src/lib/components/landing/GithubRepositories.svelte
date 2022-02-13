@@ -52,7 +52,7 @@
 	}
 
 	function handleCardClick(e: CustomEvent) {
-		const pos = e.detail.pos;
+		const pos = e.detail.id;
 		if (pos === selectedPos) {
 			return;
 		}
@@ -145,7 +145,7 @@
 				{/if}
 				{#each $displayRepositoriesCardStore as props, pos}
 					<SmallPhotoCard
-						{pos}
+						id={pos}
 						title={props.repository.name}
 						desc={props.repository.author}
 						date={props.repository.date}
