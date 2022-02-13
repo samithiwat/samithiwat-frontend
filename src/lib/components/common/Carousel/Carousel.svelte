@@ -6,25 +6,9 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	export let height = 250;
+	export let height = 365;
 	export let width = 650;
-	export let images: ModalImageProps[] = [
-		{
-			name: '',
-			description: '',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-Thinc-Background.svg'
-		},
-		{
-			name: '',
-			description: '',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-MCV-Background.svg'
-		},
-		{
-			name: '',
-			description: '',
-			imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg'
-		}
-	];
+	export let images: ModalImageProps[] = [];
 	let pointWidth = width / 5 / images.length;
 	let currentImageIdx = 0;
 	let counter;
@@ -64,7 +48,7 @@
 
 <div class="relative flex items-center text-white">
 	{#key currentImageIdx}
-		{#if images.length > 0}
+		{#if images.length > 1}
 			<CarouselPointSlice
 				{images}
 				width={pointWidth}
