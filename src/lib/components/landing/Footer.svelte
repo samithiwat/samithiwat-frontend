@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="relative flex h-[25rem] w-full flex-col justify-center bg-footer bg-cover bg-center text-center font-MuseoModerno sm:h-[30rem]"
+	class="relative flex h-[25rem] w-full select-none flex-col justify-center bg-footer bg-cover bg-center text-center font-MuseoModerno sm:h-[30rem]"
 >
 	<p class="text-3xl text-white mobile-m:text-4xl sm:text-5xl 2xl:text-8xl">Get in touch with me</p>
 	<p class="mt-5 text-base text-white mobile-m:text-lg 2xl:text-3xl">

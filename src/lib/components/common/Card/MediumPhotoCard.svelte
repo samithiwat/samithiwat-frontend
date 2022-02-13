@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
+
 	export let title = 'Lorem ipsum';
 	export let desc = 'Maecenas porttito4';
 	export let height = 450;
@@ -12,9 +14,15 @@
 	let descriptionSize = 0.04 * height;
 	let titleHeight = 0.09 * height;
 	let descriptionHeight = 0.06 * height;
+
+	const dispatch = createEventDispatcher();
 </script>
 
-<div class="card medium-card" style="height:{height}px; width:{width}px; padding: {padding}px">
+<div
+	class="card medium-card select-none"
+	style="height:{height}px; width:{width}px; padding: {padding}px"
+	on:click={() => dispatch('click')}
+>
 	<div class="flex w-full items-center justify-center">
 		<img
 			{src}

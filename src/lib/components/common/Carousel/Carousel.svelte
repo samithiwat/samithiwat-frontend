@@ -4,21 +4,18 @@
 	import type { ModalImageProps } from '$lib/common/types/modal';
 	import { Direction } from '$lib/common/enums/common';
 	import { onMount } from 'svelte';
-	import { fade, fly } from 'svelte/transition';
-	import { duration } from 'moment';
+	import { fade } from 'svelte/transition';
 
-	export let height: number = 250;
-	export let width: number = 650;
+	export let height = 250;
+	export let width = 650;
 	export let images: ModalImageProps[] = [
 		{ imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-Thinc-Background.svg' },
 		{ imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-MCV-Background.svg' },
 		{ imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg' }
 	];
-	let pointWidth: number = width / 5 / images.length;
-	let currentImageIdx: number = 0;
+	let pointWidth = width / 5 / images.length;
+	let currentImageIdx = 0;
 	let counter;
-	let rightPressed = false;
-	let leftPressed = false;
 
 	onMount(() => {
 		counter = setInterval(() => {
@@ -29,11 +26,9 @@
 	function handleChangePic(direction: Direction) {
 		switch (direction) {
 			case Direction.LEFT:
-				[leftPressed, rightPressed] = [true, false];
 				currentImageIdx = currentImageIdx === 0 ? images.length - 1 : currentImageIdx - 1;
 				break;
 			case Direction.RIGHT:
-				[leftPressed, rightPressed] = [false, true];
 				currentImageIdx = currentImageIdx === images.length - 1 ? 0 : currentImageIdx + 1;
 				break;
 		}

@@ -17,4 +17,17 @@ const createModalProps = () => {
 	};
 };
 
+const createModalStatus = () => {
+	const { subscribe, set, update } = writable<boolean>(false);
+	const open = () => update(() => true);
+	const close = () => update(() => false);
+	return {
+		subscribe,
+		open,
+		close,
+		set
+	};
+};
+
 export const modalPropsStore = createModalProps();
+export const modalStatusStore = createModalStatus();

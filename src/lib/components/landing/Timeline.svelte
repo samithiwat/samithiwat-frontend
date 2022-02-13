@@ -1,4 +1,6 @@
 <script>
+	import { modalStatusStore } from '$lib/stores/modal.store';
+
 	import Icon from '@iconify/svelte';
 	import MediumPhotoCard from '../common/Card/MediumPhotoCard.svelte';
 	import Circle from '../common/Icon/Circle.svelte';
@@ -65,7 +67,7 @@
 			</div>
 			<div class="z-20 flex h-full w-full flex-col items-center gap-y-60 py-[27rem]">
 				{#each leftTimeline as { title, desc, imgUrl }}
-					<MediumPhotoCard {title} {desc} src={imgUrl} />
+					<MediumPhotoCard {title} {desc} src={imgUrl} on:click={() => modalStatusStore.open()} />
 				{/each}
 			</div>
 
@@ -92,7 +94,7 @@
 			</div>
 			<div class="z-20 flex h-full w-full flex-col items-center gap-y-60 py-20">
 				{#each rightTimeline as { title, desc, imgUrl }}
-					<MediumPhotoCard {title} {desc} src={imgUrl} />
+					<MediumPhotoCard {title} {desc} src={imgUrl} on:click={() => modalStatusStore.open()} />
 				{/each}
 			</div>
 		</div>
