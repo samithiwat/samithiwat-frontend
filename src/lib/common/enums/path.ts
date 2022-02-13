@@ -1,5 +1,6 @@
 export enum Path {
 	LANDING = '/',
 	ABOUT = '/about',
-	CONTACT = '/contact'
+	CONTACT = '/contact',
+	BLOG = '/blog'
 }

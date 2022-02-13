@@ -13,5 +13,9 @@ export const paths: PagePath[] = [
 	{
 		name: 'Contact',
 		path: Path.CONTACT
+	},
+	{
+		name: 'Blog',
+		path: Path.BLOG
 	}
 ];
