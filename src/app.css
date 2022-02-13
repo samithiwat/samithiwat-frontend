@@ -7,25 +7,65 @@
 @layer base {
 	@font-face {
 		font-family: 'MuseoModerno';
-		src: url('/fonts/MuseoModerno-Regular.ttf');
+		src: url('/fonts/MuseoModerno/MuseoModerno-Regular.ttf');
+		font-weight: 400;
+	}
+	@font-face {
+		font-family: 'MuseoModerno';
+		src: url('/fonts/MuseoModerno/MuseoModerno-SemiBold.ttf');
+		font-weight: 600;
+	}
+	@font-face {
+		font-family: 'MuseoModerno';
+		src: url('/fonts/MuseoModerno/MuseoModerno-Bold.ttf');
+		font-weight: 700;
+	}
+	@font-face {
+		font-family: 'MuseoModerno';
+		src: url('/fonts/MuseoModerno/MuseoModerno-ExtraBold.ttf');
+		font-weight: 800;
+	}
+
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins/Poppins-Regular.ttf');
 		font-weight: 400;
 	}
 	@font-face {
 		font-family: 'Poppins';
-		src: url('/fonts/Poppins-Regular.ttf');
-		font-weight: 400;
+		src: url('/fonts/Poppins/Poppins-SemiBold.ttf');
+		font-weight: 600;
+	}
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins/Poppins-Bold.ttf');
+		font-weight: 700;
+	}
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins/Poppins-ExtraBold.ttf');
+		font-weight: 800;
 	}
 	@font-face {
 		font-family: 'Lato';
-		src: url('/fonts/Lato-Regular.ttf');
+		src: url('/fonts/Lato/Lato-Regular.ttf');
 		font-weight: 400;
 	}
 }
 
+img {
+	user-drag: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
 body {
-	@apply font-MuseoModerno
-	bg-cover
-	bg-fixed;
+	@apply bg-cover
+	bg-fixed
+	font-MuseoModerno;
 }
 h1 {
 	@apply text-8xl
@@ -51,6 +91,38 @@ h6 {
 }
 
 @layer components {
+	.btn {
+		@apply select-none
+		rounded-2xl
+		font-semibold;
+	}
+
+	.btn-white {
+		@apply bg-white
+		text-black
+		hover:bg-mint-gradian
+		hover:text-white;
+	}
+
+	.btn-mint {
+		@apply bg-mint-gradian
+		bg-gradient-to-r
+		text-white
+		hover:bg-white
+		hover:text-gray-primary;
+	}
+
+	.card {
+		@apply bg-yellow-card hover:animate-wiggle hover:shadow-lg hover:shadow-amber-100;
+	}
+
+	.small-card {
+		@apply rounded-2xl;
+	}
+
+	.medium-card {
+		@apply rounded-2xl;
+	}
 }
 
 @layer utilities {

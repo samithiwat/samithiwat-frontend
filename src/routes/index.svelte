@@ -1,10 +1,20 @@
 <script lang="ts">
+	import AboutMe from '$lib/components/landing/AboutMe.svelte';
+	import Footer from '$lib/components/landing/Footer.svelte';
+	import GithubRepositories from '$lib/components/landing/GithubRepositories.svelte';
 	import Header from '$lib/components/landing/Header.svelte';
-	import Hero from '$lib/components/landing/Hero.svelte';
+	import Timeline from '$lib/components/landing/Timeline.svelte';
 </script>
 
-<div class="min-h-screen flex flex-col">
+<svelte:head>
+	<title>Samithiwat.dev</title>
+</svelte:head>
+
+<div class="flex min-h-screen flex-col bg-main">
 	<Header />
-	<Hero />
+	<AboutMe />
+	<GithubRepositories />
+	<Timeline />
+	<Footer />
 	<main class="grow" />
 </div>

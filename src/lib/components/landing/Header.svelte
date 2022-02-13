@@ -1,28 +1,15 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
 </script>
 
-<div
-	class="bg-header bg-cover flex flex-col justify-center text-center font-MuseoModerno w-full h-50 sm:h-100 relative"
->
-	<h2 class="text-white text-2xl sm:text-5xl">Hello, Visitor!</h2>
-	<h5 class="text-white text-sm sm:text-lg">Welcome to my personnal website</h5>
-
-	<span
-		class="flex flex-wrap sm:flex-row justify-center my-3 sm:my-12 px-28 sm:px-20 gap-x-10 gap-y-5 sm:gap-x-20"
+<div class="my-20 flex select-none items-center justify-center">
+	<div
+		class="flex h-200 w-350 flex-col items-center justify-center rounded-[2.5rem] bg-gray-primary font-Poppins text-6xl"
 	>
-		<a href="https://www.linkedin.com/in/samithiwat/" target="_blank" class="">
-			<Icon icon="akar-icons:linkedin-fill" color="white" class="w-10 sm:w-20 h-10 sm:h-20" />
-		</a>
-		<a href="https://github.com/samithiwat" target="_blank" class="">
-			<Icon icon="akar-icons:github-fill" color="white" class="w-10 sm:w-20 h-10 sm:h-20" />
-		</a>
-		<a href="https://www.facebook.com/profile.php?id=100004633398479" target="_blank">
-			<Icon icon="entypo-social:facebook" color="white" class="w-10 sm:w-20 h-10 sm:h-20" />
-		</a>
-		<a href="https://www.instagram.com/samithiwat/" target="_blank">
-			<Icon icon="bi:instagram" color="white" class="w-10 sm:w-20 h-10 sm:h-20" />
-		</a>
-	</span>
-	<h5 class="text-white text-xs sm:text-base">Follow me</h5>
+		<div
+			class="flex flex-col items-center bg-gradient-to-r from-mint-gradian via-purple-gradian to-red-gradian bg-clip-text font-bold text-transparent"
+		>
+			<p>WELCOME TO</p>
+			<p>samithiwat.dev</p>
+		</div>
+	</div>
 </div>
