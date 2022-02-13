@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 
-	export let id;
+	export let id: number;
 	export let title = 'Lorem ipsum';
 	export let desc = 'Maecenas porttito4';
 	export let height = 450;
