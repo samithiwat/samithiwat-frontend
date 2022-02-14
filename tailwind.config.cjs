@@ -9,7 +9,10 @@ module.exports = {
 				shakeX: 'shakeX 1.2s ease-in-out infinite',
 				'shakeY-once': 'shakeY 1.2s ease-in-out',
 				'shakeX-once': 'shakeX 0.7s ease-in-out',
-				rubberBand: 'rubberBand 500ms ease-in-out'
+				rubberBand: 'rubberBand 500ms ease-in-out',
+				disco: 'disco 7s ease-in-out infinite',
+				'disco-text': 'disco-text 4s ease-in-out infinite',
+				'disco-border': 'disco-border 4s ease-in-out infinite'
 			},
 			backgroundImage: {
 				footer: "url('/images/background/footer-bg.png')",
@@ -79,6 +82,38 @@ module.exports = {
 					'50%': { transform: 'scale(1.15)' },
 					'65%': { transform: 'scale(0.95)' },
 					'75%': { transform: 'scale(1.05)' }
+				},
+				disco: {
+					'0%, 100%': { background: '#18CDCA' },
+					'20%': { background: '#088CDA' },
+					'40%': { background: '#4F80E1' },
+					'60%': { background: '#EB5757' },
+					'80%': { background: '#FFBFBF' }
+				},
+				'disco-text': {
+					'0%, 100%': {
+						color: '#18CDCA'
+					},
+					'20%': {
+						color: '#088CDA'
+					},
+					'40%': {
+						color: '#4F80E1'
+					},
+					'60%': {
+						color: '#EB5757'
+					},
+					'80%': {
+						color: '#FFBFBF'
+					}
+				},
+				'disco-border': {
+					'0%, 100%': {
+						'border-color': '#088CDA'
+					},
+					'50%': {
+						'border-color': '#EB5757'
+					}
 				}
 			},
 			spacing: {
