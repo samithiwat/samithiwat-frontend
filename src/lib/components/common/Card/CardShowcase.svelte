@@ -1,8 +1,12 @@
 <script lang="ts">
 	import { Direction } from '$lib/common/enums/common';
 	import { GithubClassName } from '$lib/common/enums/github-repo';
+	import { calCardSize, calMaxShown } from '$lib/common/function/card.function';
+	import type { GithubCardProps } from '$lib/common/types/card';
+	import { innerWidth } from '$lib/stores/common.store';
 
 	import {
+		cardShowCaseProps,
 		displayRepositoriesCardStore,
 		leftArrowStore,
 		offsetPos,
@@ -11,20 +15,28 @@
 		selectedPos
 	} from '$lib/stores/github-repository.store';
 	import Icon from '@iconify/svelte';
+	import { onMount } from 'svelte';
 	import SmallPhotoCard from './SmallPhotoCard.svelte';
 
-	function handleCardClick(e: CustomEvent) {
-		const pos = e.detail.id;
+	export let maxShown = 4;
+	export let cardSize = {
+		width: 225,
+		height: 300
+	};
+	export let cards: GithubCardProps[] = [];
+
+	async function handleCardClick(e: CustomEvent) {
+		const { pos } = e.detail;
 		if (pos === $selectedPos) {
 			return;
 		}
 
-		updateHighlight($selectedPos, pos);
+		await updateHighlight($selectedPos, pos);
 
 		$selectedPos = pos;
 	}
 
-	function handleArrowClick(dir: Direction) {
+	async function handleArrowClick(dir: Direction) {
 		let prevPos = $selectedPos;
 		switch (dir) {
 			case Direction.LEFT:
@@ -38,39 +50,60 @@
 						$offsetPos = 0;
 					}
 
-					prevPos++;
+					if (cards.length > 1) {
+						prevPos++;
+					}
 				}
 				break;
 			case Direction.RIGHT:
 				$selectedPos += 1;
-				if ($selectedPos > 3) {
-					$selectedPos = 3;
+
+				if ($selectedPos > maxShown - 1) {
+					$selectedPos = maxShown - 1;
 					$offsetPos += 1;
 
-					if ($offsetPos > $repositoriesStore.length - 4) {
-						$offsetPos = $repositoriesStore.length - 4;
+					if ($offsetPos > $repositoriesStore.length - maxShown) {
+						$offsetPos = $repositoriesStore.length - maxShown;
 					}
 
-					prevPos--;
+					if (cards.length > 1) {
+						prevPos--;
+					}
 				}
 
 				break;
 		}
-		displayRepositoriesCardStore.setRepository($repositoriesStore, $offsetPos);
-		updateHighlight(prevPos, $selectedPos);
+		await displayRepositoriesCardStore.setRepository($repositoriesStore, $offsetPos, maxShown);
+
+		await updateHighlight(prevPos, $selectedPos);
 	}
 
 	function updateHighlight(prevPos: number, pos: number) {
-		$displayRepositoriesCardStore[prevPos].cardClass = GithubClassName.CARD_DESELECTED;
-		$displayRepositoriesCardStore[prevPos].titleColor = GithubClassName.TITLE_DESELECTED;
+		if (maxShown > 1) {
+			cards[prevPos].cardClass = GithubClassName.CARD_DESELECTED;
+			cards[prevPos].titleColor = GithubClassName.TITLE_DESELECTED;
+		}
 
-		$displayRepositoriesCardStore[pos].cardClass = GithubClassName.CARD_SELECTED;
-		$displayRepositoriesCardStore[pos].titleColor = GithubClassName.TITLE_SELECTED;
+		cards[pos].cardClass = GithubClassName.CARD_SELECTED;
+		cards[pos].titleColor = GithubClassName.TITLE_SELECTED;
 	}
+
+	onMount(async () => {
+		console.log($innerWidth + ', shown: ' + maxShown);
+		await cardShowCaseProps.setCardSize(calCardSize($innerWidth));
+		await cardShowCaseProps.setMaxShown(calMaxShown($innerWidth));
+		$selectedPos = maxShown > 1 ? $selectedPos : 0;
+		$selectedPos = $selectedPos > maxShown - 1 ? 0 : $selectedPos;
+		$offsetPos = $offsetPos + maxShown > cards.length ? $offsetPos - maxShown : $offsetPos;
+		$offsetPos = $offsetPos < 0 ? 0 : $offsetPos;
+		$selectedPos = $offsetPos === 0 ? 0 : $selectedPos;
+		await repositoriesStore.resetCardStyle($offsetPos);
+		await displayRepositoriesCardStore.setRepository($repositoriesStore, $offsetPos, maxShown);
+	});
 </script>
 
-<div class="mt-4 flex flex-row items-center gap-x-4">
-	{#if $displayRepositoriesCardStore.length > 0}
+<div class="mt-4 flex flex-row items-center gap-x-3">
+	{#if cards.length > 0}
 		<div
 			on:click={() => {
 				leftArrowStore.triggle();
@@ -79,28 +112,30 @@
 		>
 			<Icon
 				icon={$leftArrowStore}
-				class="h-12 w-12 transform text-yellow-card transition duration-200 ease-in-out hover:-translate-x-1 hover:scale-110 active:-translate-x-4"
+				class="h-6 w-6 transform text-yellow-card transition duration-200 ease-in-out hover:-translate-x-1 hover:scale-110 active:-translate-x-4 sm:h-10 sm:w-10"
 			/>
 		</div>
-		{#each $displayRepositoriesCardStore as props, pos}
-			{#key $offsetPos}
-				<div class="animate-shakeX-once">
-					<SmallPhotoCard
-						id={pos}
-						title={props.repository.name}
-						desc={props.repository.author}
-						date={props.repository.date}
-						time={props.repository.time}
-						cardClass={props.cardClass}
-						titleColor={props.titleColor}
-						height={400}
-						width={285}
-						on:click={handleCardClick}
-					/>
-				</div>
-			{/key}
-		{/each}
-
+		{#key $cardShowCaseProps.maxShown}
+			{#each cards as props, pos}
+				{#key $offsetPos}
+					<div class="animate-shakeX-once">
+						<SmallPhotoCard
+							{pos}
+							id={props.id}
+							title={props.repository.name}
+							desc={props.repository.author}
+							date={props.repository.date}
+							time={props.repository.time}
+							cardClass={props.cardClass}
+							titleColor={props.titleColor}
+							height={cardSize.height}
+							width={cardSize.width}
+							on:click={handleCardClick}
+						/>
+					</div>
+				{/key}
+			{/each}
+		{/key}
 		<div
 			on:click={() => {
 				rightArrowStore.triggle();
@@ -109,7 +144,7 @@
 		>
 			<Icon
 				icon={$rightArrowStore}
-				class="h-12 w-12 transform text-yellow-card transition duration-200 ease-in-out hover:translate-x-1 hover:scale-110 active:translate-x-4"
+				class="h-6 w-6 transform text-yellow-card transition duration-200 ease-in-out hover:translate-x-1 hover:scale-110 active:translate-x-4 sm:h-10 sm:w-10"
 			/>
 		</div>
 	{/if}

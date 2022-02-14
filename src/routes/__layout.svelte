@@ -18,6 +18,7 @@
 	import { modalCarouselPropsStore, modalStatusStore } from '$lib/stores/modal.store';
 	import ModalCarousel from '$lib/components/common/Modal/ModalCarousel.svelte';
 	import ModalRoot from '$lib/components/common/Modal/ModalRoot.svelte';
+	import { innerWidth } from '$lib/stores/common.store';
 
 	export let currentPath: string;
 
@@ -35,6 +36,8 @@
 		</ModalRoot>
 	{/if}
 {/key}
+
+<svelte:window bind:innerWidth={$innerWidth} />
 
 <Nav {paths} {currentPath} />
 <main>
