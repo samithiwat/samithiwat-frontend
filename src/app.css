@@ -94,7 +94,9 @@ h6 {
 	.btn {
 		@apply select-none
 		rounded-2xl
-		font-semibold;
+		font-semibold
+		transition
+		duration-[400ms];
 	}
 
 	.btn-white {
@@ -113,15 +115,15 @@ h6 {
 	}
 
 	.card {
-		@apply bg-yellow-card hover:animate-wiggle hover:shadow-lg hover:shadow-amber-100;
+		@apply bg-yellow-card transition duration-500 hover:cursor-pointer hover:shadow-lg hover:shadow-amber-100;
 	}
 
 	.small-card {
-		@apply rounded-2xl;
+		@apply rounded-2xl hover:-translate-y-5;
 	}
 
 	.medium-card {
-		@apply rounded-2xl;
+		@apply rounded-2xl hover:animate-wiggle;
 	}
 }
 

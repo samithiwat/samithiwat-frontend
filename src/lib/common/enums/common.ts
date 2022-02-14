@@ -32,3 +32,13 @@ export enum Color {
 	PINK_SGCU_ICON = 'bg-pink-sgcu-icon',
 	PINK_FECAMP_ICON = 'bg-pink-fecamp-icon'
 }
+
+export enum ScreenWidth {
+	MOBILE_SMALL = 350,
+	MOBILE_MEDIUM = 400,
+	MOBILE_LARGE = 450,
+	TABLET = 800,
+	LABTOP_SMALL = 1050,
+	LABTOP_MEDIUM = 1500,
+	LABTOP_LARGE = 2560
+}

@@ -57,13 +57,13 @@
 			/>
 			<div class="absolute flex h-full w-full flex-row justify-between">
 				<div
-					class="z-30 flex h-full items-center rounded-l-xl bg-black px-3 opacity-0 hover:cursor-pointer hover:opacity-20"
+					class="z-30 flex h-full items-center rounded-l-xl bg-gray-primary px-4 opacity-0 transition duration-500 ease-in-out hover:cursor-pointer hover:opacity-40"
 					on:click={() => handleChangePic(Direction.LEFT)}
 				>
 					<Icon icon="dashicons:arrow-left-alt2" class="h-10 w-10 " />
 				</div>
 				<div
-					class="z-30 flex h-full items-center rounded-r-xl bg-black px-3 opacity-0 hover:cursor-pointer hover:opacity-20"
+					class="z-30 flex h-full items-center rounded-r-xl bg-gray-primary px-4 opacity-0 transition duration-500 ease-in-out hover:cursor-pointer hover:opacity-40"
 					on:click={() => handleChangePic(Direction.RIGHT)}
 				>
 					<Icon icon="dashicons:arrow-right-alt2" class="h-10 w-10" />
