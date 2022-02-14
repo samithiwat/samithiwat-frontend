@@ -61,6 +61,10 @@ module.exports = {
 				Lato: ['Lato', 'sans-serif'],
 				Poppins: ['Poppins', 'sans-serif']
 			},
+			fontSize: {
+				'3xs': ['0.5rem', '0.75rem'],
+				'2xs': ['0.625rem', '0.875rem']
+			},
 			keyframes: {
 				wiggle: {
 					'0%, 100%': { transform: 'rotate(-3deg)' },
