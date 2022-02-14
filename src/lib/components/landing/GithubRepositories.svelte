@@ -31,9 +31,9 @@
 
 <div class="my-20 flex select-none justify-center font-Poppins">
 	<div
-		class="flex h-full w-9/12 flex-col items-center rounded-xl bg-gray-primary py-5 shadow-lg shadow-pink-primary transition duration-1000 hover:shadow-purple-primary sm:rounded-4xl sm:p-10 sm:py-8"
+		class="flex h-full w-3/4 flex-col items-center rounded-xl bg-gray-primary py-8 shadow-lg shadow-pink-primary transition duration-1000 hover:shadow-purple-primary sm:rounded-4xl sm:p-10"
 	>
-		<span class="flex w-10/12 flex-row items-end justify-center lg:gap-x-5 ">
+		<span class="flex w-10/12 flex-row items-end justify-center lg:gap-x-5">
 			{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
 				<a href="https://github.com/samithiwat" target="blank" class="w-1/12">
 					<Icon icon="akar-icons:github-fill" color="white" class="h-auto w-full" />
@@ -54,35 +54,59 @@
 			</div>
 		{:else}
 			{#key $selectedPos}
-				<div class="my-5 sm:my-10 w-11/12 flex flex-col items-center sm:flex-row">
-					<div class="flex flex-col items-center justify-center w-4/12">
+				<div class="flex flex-col items-center w-full sm:px-10 my-5 gap-y-2">
+					{#if $innerWidth < ScreenWidth.MOBILE_LARGE}
 						<img
 							src="https://storage.googleapis.com/fe-camp/Annonymous-Icon.png"
 							alt="Repository Cover"
-							class="w-5/6 h-auto rounded-lg md:rounded-xl lg:rounded-4xl overflow-hidden"
+							class="w-1/3 h-auto rounded-lg md:rounded-3xl xl:rounded-4xl overflow-hidden"
 							in:scale={{ duration: 800, start: 0.8 }}
 						/>
-					</div>
-					<div class="my-2 sm:my-0 flex w-8/12 flex-col md:gap-y-2 lg:gap-y-5">
+					{/if}
+					<div class="flex flex-row gap-x-5 w-full">
+						{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
+							<div class="w-1/3" />
+						{/if}
 						<p
-							class="w-full text-lg text-center sm:text-left sm:text-2xl lg:text-4xl xl:text-6xl font-bold text-white"
+							class="w-full sm:w-3/4 text-lg text-center sm:text-left sm:text-2xl lg:text-4xl xl:text-6xl font-bold text-white"
 							in:slide={{ duration: 100 }}
 						>
 							{$displayRepositoriesCardStore[$selectedPos]?.repository?.name}
 						</p>
-						<p class="text-base w-full text-center sm:text-left lg:text-2xl text-white">
+					</div>
+					<div class="flex flex-row gap-x-5 w-full">
+						{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
+							<div class="w-1/3" />
+						{/if}
+						<p class="text-base w-full sm:w-3/4 text-center sm:text-left lg:text-2xl text-white">
 							{$displayRepositoriesCardStore[$selectedPos]?.repository?.author}
 						</p>
+					</div>
+					<div class="flex flex-row gap-x-5 w-full px-5 sm:px-0">
+						{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
+							<img
+								src="https://storage.googleapis.com/fe-camp/Annonymous-Icon.png"
+								alt="Repository Cover"
+								class="w-1/3 h-auto rounded-lg md:rounded-3xl xl:rounded-4xl overflow-hidden"
+								in:scale={{ duration: 800, start: 0.8 }}
+							/>
+						{/if}
 						<p
-							class="mt-2 h-2/3 w-full text-xs lg:text-base text-gray-secondary"
+							class="mt-2 h-56 w-full md:h-32 lg:h-44 sm:w-3/4 text-xs lg:text-base text-gray-secondary"
 							in:fade={{ duration: 1000 }}
 						>
 							{$displayRepositoriesCardStore[$selectedPos]?.repository?.description}
 						</p>
-
-						<span class="my-4 sm:my-0 flex w-full flex-row justify-between gap-x-1 sm:gap-x-0">
+					</div>
+					<div class="flex flex-row gap-x-5 w-full sm:mt-2">
+						{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
+							<div class="w-1/3" />
+						{/if}
+						<span
+							class="my-4 sm:my-0 flex w-full sm:w-3/4 flex-row justify-between gap-x-1 sm:gap-x-0"
+						>
 							<span
-								class="flex flex-row items-center text-3xs justify-center gap-x-1 lg:text-xs xl:text-sm text-gray-secondary"
+								class="flex flex-row w-full sm:justify-start sm:items-end items-center text-3xs justify-center gap-x-1 lg:text-xs xl:text-sm text-gray-secondary"
 							>
 								Last update:
 
@@ -102,17 +126,17 @@
 								>
 							{/if}
 						</span>
-						{#if $innerWidth < ScreenWidth.MOBILE_LARGE}
-							<button
-								class="btn btn-white rounded-md text-xs gap-x-1 flex h-6 w-full items-center justify-center"
-								on:click={() => {
-									window.open($displayRepositoriesCardStore[$selectedPos]?.repository?.url);
-								}}
-							>
-								View <Icon icon="bx:bx-link-external" /></button
-							>
-						{/if}
 					</div>
+					{#if $innerWidth < ScreenWidth.MOBILE_LARGE}
+						<button
+							class="btn btn-white rounded-md text-xs gap-x-1 flex h-6 w-10/12 items-center justify-center"
+							on:click={() => {
+								window.open($displayRepositoriesCardStore[$selectedPos]?.repository?.url);
+							}}
+						>
+							View <Icon icon="bx:bx-link-external" /></button
+						>
+					{/if}
 				</div>
 			{/key}
 			{#key $innerWidth}
