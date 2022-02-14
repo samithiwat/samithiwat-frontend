@@ -25,10 +25,9 @@
 	let height = nProps * 450 + 50 * (nProps - 1) + 500;
 </script>
 
-s
-<div class="flex select-none justify-center font-Poppins">
+<div class="mb-20 flex select-none justify-center font-Poppins">
 	<div
-		class="flex w-350 flex-col items-center justify-center gap-y-20 rounded-4xl bg-gray-primary py-20 text-white"
+		class="flex w-350 flex-col items-center justify-center gap-y-20 rounded-4xl bg-gray-primary py-20 text-white shadow-lg shadow-sky-300 transition duration-1000 hover:shadow-mint-gradian"
 		style="height: {height}px;"
 	>
 		<span class="flex flex-col items-center">

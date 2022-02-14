@@ -18,7 +18,9 @@
 </script>
 
 <div class="my-20 flex select-none justify-center font-Poppins">
-	<div class="flex h-[65rem] w-350 flex-col items-center rounded-4xl bg-gray-primary py-8">
+	<div
+		class="flex h-[65rem] w-350 flex-col items-center rounded-4xl bg-gray-primary py-8 shadow-lg shadow-pink-primary transition duration-1000 hover:shadow-purple-primary"
+	>
 		<span class="flex w-[62.5rem] flex-row items-end justify-center gap-x-5">
 			<a href="https://github.com/samithiwat" target="blank">
 				<Icon icon="akar-icons:github-fill" color="white" class="h-20 w-20" />
