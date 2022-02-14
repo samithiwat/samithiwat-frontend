@@ -17,7 +17,6 @@ module.exports = {
 			backgroundImage: {
 				footer: "url('/images/background/footer-bg.png')",
 				hero: "url('/images/background/hero-bg.png')",
-				'about-me': "url('/images/background/about-me-bg.png')",
 				'selected-card':
 					'linear-gradient(64.16deg, #18CDCA 0%, #088CDA 33.33%, #82A0DC 60.42%, #EB5757 94.79%)',
 				main: 'linear-gradient(0deg, #2B2A2A, #2B2A2A)'

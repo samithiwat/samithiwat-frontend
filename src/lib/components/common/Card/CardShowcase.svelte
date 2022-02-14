@@ -89,7 +89,6 @@
 	}
 
 	onMount(async () => {
-		console.log($innerWidth + ', shown: ' + maxShown);
 		await cardShowCaseProps.setCardSize(calCardSize($innerWidth));
 		await cardShowCaseProps.setMaxShown(calMaxShown($innerWidth));
 		$selectedPos = maxShown > 1 ? $selectedPos : 0;

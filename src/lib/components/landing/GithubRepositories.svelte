@@ -31,7 +31,7 @@
 
 <div class="my-20 flex select-none justify-center font-Poppins">
 	<div
-		class="flex h-full w-9/12 flex-col items-center rounded-4xl bg-gray-primary py-5 shadow-lg shadow-pink-primary transition duration-1000 hover:shadow-purple-primary sm:p-10 sm:py-8"
+		class="flex h-full w-9/12 flex-col items-center rounded-xl bg-gray-primary py-5 shadow-lg shadow-pink-primary transition duration-1000 hover:shadow-purple-primary sm:rounded-4xl sm:p-10 sm:py-8"
 	>
 		<span class="flex w-10/12 flex-row items-end justify-center lg:gap-x-5 ">
 			{#if $innerWidth > ScreenWidth.MOBILE_LARGE}

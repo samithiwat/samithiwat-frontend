@@ -21,7 +21,7 @@
 				<img
 					src={$aboutmeProps.imgUrl}
 					alt="Samithiwat Pic"
-					class="my-2 h-48 w-48 rounded-2xl border-8 border-yellow-card bg-about-me bg-cover bg-center object-cover md:h-60 md:w-60 md:border-[14px] lg:my-5 lg:h-80 lg:w-80 lg:border-[18px] xl:h-100 xl:w-100"
+					class="my-2 h-48 w-48 rounded-2xl border-8 border-yellow-card bg-cover bg-center object-cover md:h-60 md:w-60 md:border-[14px] lg:my-5 lg:h-80 lg:w-80 lg:border-[18px] xl:h-100 xl:w-100"
 				/>
 				<span class="flex select-none flex-row gap-x-2 text-white">
 					<Icon icon="cil:birthday-cake" class="h-3 w-3 sm:h-5 sm:w-5" />
