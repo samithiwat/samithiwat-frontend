@@ -123,7 +123,7 @@ h6 {
 	}
 
 	.medium-card {
-		@apply rounded-2xl hover:animate-wiggle;
+		@apply rounded-md hover:animate-wiggle sm:rounded-lg lg:rounded-2xl;
 	}
 }
 
