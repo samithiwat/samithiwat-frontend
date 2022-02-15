@@ -1,12 +1,5 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-
-	// export let height = 650;
-	// export let width = 800;
-	// export let bgColor = 'bg-gray-primary';
-	// export let gap = 18;
-	// export let padding = 48;
-
 	const dispatch = createEventDispatcher();
 </script>
 

@@ -1,9 +1,7 @@
+import type { Color } from '../enums/common';
+
 export type ModalProps = {
-	width: number;
-	height: number;
-	bgColor: string;
-	padding: number;
-	gap: number;
+	bgColor?: Color;
 };
 
 export type ModalImageProps = {
@@ -13,9 +11,8 @@ export type ModalImageProps = {
 };
 
 export type ModalCarousel = ModalProps & {
-	title: string;
-	content: string;
-	images: ModalImageProps[];
+	content?: string;
+	images?: ModalImageProps[];
 };
 
 export type ModalStatus = {
