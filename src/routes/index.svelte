@@ -4,11 +4,14 @@
 	import GithubRepositories from '$lib/components/landing/GithubRepositories.svelte';
 	import Header from '$lib/components/landing/Header.svelte';
 	import Timeline from '$lib/components/landing/Timeline.svelte';
+	import { innerWidth } from '$lib/stores/common.store';
 </script>
 
 <svelte:head>
 	<title>Samithiwat.dev</title>
 </svelte:head>
+
+<svelte:window bind:innerWidth={$innerWidth} />
 
 <div class="flex min-h-screen flex-col bg-main">
 	<Header />
@@ -16,5 +19,4 @@
 	<GithubRepositories />
 	<Timeline />
 	<Footer />
-	<main class="grow" />
 </div>
