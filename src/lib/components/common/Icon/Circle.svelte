@@ -16,7 +16,7 @@
 </script>
 
 <div
-	class={'flex z-20 items-center justify-center rounded-full hover:animate-spin-slow'}
+	class={'flex z-20 items-center justify-center rounded-full hover:animate-rubberBand'}
 	style="height: {height}px; width: {width}px; background-color: {color}"
 >
 	<slot />

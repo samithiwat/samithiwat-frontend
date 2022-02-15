@@ -27,7 +27,7 @@
 </script>
 
 <div
-	class="card medium-card flex select-none flex-col justify-center gap-y-4 lg:gap-y-8 "
+	class="card medium-card flex animate-shakeY-once select-none flex-col justify-center gap-y-4 lg:gap-y-8 "
 	style="height:{$timelineConfig.cardSize.height}px; width:{$timelineConfig.cardSize
 		.width}px; padding: {padding}px"
 	on:click={() => dispatch('click', { id })}
