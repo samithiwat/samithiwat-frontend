@@ -10,27 +10,27 @@ export enum Status {
 }
 
 export enum Color {
-	GRAY_PRIMARY = 'bg-gray-primary',
-	GRAY_SECONDARY = 'bg-gray-secondary',
-	GRAY_ICON = 'bg-gray-icon',
+	GRAY_PRIMARY = '#373A3C',
+	GRAY_SECONDARY = '#BDBDBD',
+	GRAY_ICON = '#6D6D6D',
 
-	BLUE_PRIMARY = 'bg-blue-primary',
-	BLUE_ICON = 'bg-blue-icon',
+	BLUE_PRIMARY = '#088CDA',
+	BLUE_ICON = '#357FA9',
 
-	YELLOW_ICON = 'bg-yellow-icon',
-	YELLOW_CARD = 'bg-yellow-card',
+	YELLOW_ICON = '#F3CC3B',
+	YELLOW_CARD = '#FFFBEC',
 
-	MINT_PRIMARY = 'bg-mint-primary',
-	MINT_GRADIAN = 'bg-mint-gradian',
+	MINT_PRIMARY = '#18CDCA',
+	MINT_GRADIAN = '#39C09B',
 
-	RED_GRADIAN = 'bg-red-gradian',
+	RED_GRADIAN = '#EB5757',
 
-	PURPLE_PRIMARY = 'bg-purple-primary',
-	PURPLE_GRADIAN = 'bg-purple-gradian',
+	PURPLE_PRIMARY = '#82A0DC',
+	PURPLE_GRADIAN = '#4F80E1',
 
-	PINK_PRIMARY = 'bg-pink-primary',
-	PINK_SGCU_ICON = 'bg-pink-sgcu-icon',
-	PINK_FECAMP_ICON = 'bg-pink-fecamp-icon'
+	PINK_PRIMARY = '#FFBFBF',
+	PINK_SGCU_ICON = '#ED0387',
+	PINK_FECAMP_ICON = '#E37F7F'
 }
 
 export enum ScreenWidth {
