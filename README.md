@@ -117,7 +117,7 @@ I'm a backend and DevOps engineering, mostly backend stuff, ambitious software e
 ## Github Stats
 
 ![samithiwat's github stats](https://github-readme-stats.vercel.app/api?username=samithiwat&hide=stars&count_private=true&show_icons=true&theme=monokai&custom_title=My%20Progress)
-[![samithiwat's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=samithiwat&theme=slateorange&layout=compact&hide_border=true&v=2)
+[![samithiwat's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=samithiwat&theme=monokai&layout=compact&hide_border=true&v=2)
 ](https://wakatime.com/dashboard)
 
 <p align="left">
