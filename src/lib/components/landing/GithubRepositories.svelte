@@ -13,10 +13,10 @@
 	import CardShowcase from '../common/Card/CardShowcase.svelte';
 	import { ScreenWidth } from '$lib/common/enums/common';
 	import { innerWidth } from '$lib/stores/common.store';
-	import { calCardSize, calMaxShown } from '$lib/common/function/card.function';
+	import { calSmallCardSize, calMaxShown } from '$lib/common/function/card.function';
 
 	onMount(async () => {
-		cardShowCaseProps.setCardSize(calCardSize($innerWidth));
+		cardShowCaseProps.setCardSize(calSmallCardSize($innerWidth));
 		cardShowCaseProps.setMaxShown(calMaxShown($innerWidth));
 		await repositoriesStore.fetch();
 		await displayRepositoriesCardStore.setRepository(
@@ -27,27 +27,27 @@
 	});
 </script>
 
-<svelte:window bind:innerWidth={$innerWidth} />
-
 <div class="my-20 flex select-none justify-center font-Poppins">
 	<div
 		class="flex h-full w-3/4 flex-col items-center rounded-xl bg-gray-primary py-8 shadow-lg shadow-pink-primary transition duration-1000 hover:shadow-purple-primary sm:rounded-4xl sm:p-10"
 	>
 		<span class="flex w-10/12 flex-row items-end justify-center lg:gap-x-5">
-			{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
-				<a href="https://github.com/samithiwat" target="blank" class="w-1/12">
-					<Icon icon="akar-icons:github-fill" color="white" class="h-auto w-full" />
-				</a>
-			{/if}
-			<div class="flex flex-row items-end justify-center">
-				<span
-					class="bg-gradient-to-r from-mint-gradian via-purple-gradian to-red-gradian bg-clip-text text-center text-3xl font-bold text-transparent md:text-3xl lg:text-left lg:text-4xl xl:text-6xl"
-				>
-					<p class="text-center">GITHUB REPOSITORIES</p>
+			<div class="flex w-full flex-col items-center">
+				<span class="flex w-full flex-row items-center justify-center sm:gap-x-2">
+					{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
+						<a href="https://github.com/samithiwat" target="blank" class="w-1/12">
+							<Icon icon="akar-icons:github-fill" color="white" class="h-auto w-full" />
+						</a>
+					{/if}
+					<p
+						class="bg-gradient-to-r from-mint-gradian via-purple-gradian to-red-gradian bg-clip-text text-center text-3xl font-bold text-transparent md:text-3xl lg:text-left lg:text-4xl xl:text-6xl"
+					>
+						GITHUB REPOSITORIES
+					</p>
 				</span>
+				<hr class="invisible w-11/12 md:visible lg:border-[1px] xl:border-2" />
 			</div>
 		</span>
-		<hr class="invisible w-10/12 md:visible lg:border-[1px] xl:border-2" />
 		{#if $displayRepositoriesCardStore.length === 0}
 			<div class="flex h-screen flex-row items-center">
 				<h2 class="text-xl text-white sm:text-4xl lg:text-7xl">Empty repository</h2>
@@ -55,7 +55,7 @@
 		{:else}
 			{#key $selectedPos}
 				<div class="flex flex-col items-center w-full sm:px-10 my-5 gap-y-2">
-					{#if $innerWidth < ScreenWidth.MOBILE_LARGE}
+					{#if $innerWidth < ScreenWidth.MOBILE_OVERALL}
 						<img
 							src="https://storage.googleapis.com/fe-camp/Annonymous-Icon.png"
 							alt="Repository Cover"
@@ -64,7 +64,7 @@
 						/>
 					{/if}
 					<div class="flex flex-row gap-x-5 w-full">
-						{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
+						{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
 							<div class="w-1/3" />
 						{/if}
 						<p
@@ -75,7 +75,7 @@
 						</p>
 					</div>
 					<div class="flex flex-row gap-x-5 w-full">
-						{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
+						{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
 							<div class="w-1/3" />
 						{/if}
 						<p class="text-base w-full sm:w-3/4 text-center sm:text-left lg:text-2xl text-white">
@@ -83,7 +83,7 @@
 						</p>
 					</div>
 					<div class="flex flex-row gap-x-5 w-full px-5 sm:px-0">
-						{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
+						{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
 							<img
 								src="https://storage.googleapis.com/fe-camp/Annonymous-Icon.png"
 								alt="Repository Cover"
@@ -99,7 +99,7 @@
 						</p>
 					</div>
 					<div class="flex flex-row gap-x-5 w-full sm:mt-2">
-						{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
+						{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
 							<div class="w-1/3" />
 						{/if}
 						<span
@@ -115,7 +115,7 @@
 								)}
 								{$displayRepositoriesCardStore[$selectedPos]?.repository?.time}
 							</span>
-							{#if $innerWidth > ScreenWidth.MOBILE_LARGE}
+							{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
 								<button
 									class="btn btn-white rounded-md text-3xs sm:text-sm md:text-xs sm:rounded-lg md:rounded-md flex h-6 md:h-5 lg:h-8 w-5/6 items-center md:w-24 lg:w-36 justify-center lg:gap-x-1 xl:gap-x-3"
 									on:click={() => {
@@ -127,7 +127,7 @@
 							{/if}
 						</span>
 					</div>
-					{#if $innerWidth < ScreenWidth.MOBILE_LARGE}
+					{#if $innerWidth < ScreenWidth.MOBILE_OVERALL}
 						<button
 							class="btn btn-white rounded-md text-xs gap-x-1 flex h-6 w-10/12 items-center justify-center"
 							on:click={() => {
