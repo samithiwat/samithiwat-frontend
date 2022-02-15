@@ -16,8 +16,8 @@
 </script>
 
 <div
-	class={'flex z-20 items-center justify-center rounded-full hover:animate-spin-slow ' + color}
-	style="height: {height}px; width: {width}px;"
+	class={'flex z-20 items-center justify-center rounded-full hover:animate-spin-slow'}
+	style="height: {height}px; width: {width}px; background-color: {color}"
 >
 	<slot />
 </div>

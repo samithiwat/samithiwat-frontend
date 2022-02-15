@@ -9,11 +9,11 @@
 	export let desc = 'Maecenas porttito4';
 	export let src =
 		'https://storage.googleapis.com/fe-camp/profile-Smity-Binchu-d84d3b57e7eb5825b283680462fea9a9e17caa54bb094835f3d1d0d2b5837632.jpg';
-	let padding;
-	let titleSize;
-	let descriptionSize;
-	let titleHeight;
-	let descriptionHeight;
+	let padding = 0;
+	let titleSize = 0;
+	let descriptionSize = 0;
+	let titleHeight = 0;
+	let descriptionHeight = 0;
 
 	const dispatch = createEventDispatcher();
 	onMount(async () => {
@@ -27,13 +27,15 @@
 </script>
 
 <div
-	class="card medium-card flex select-none flex-col justify-center gap-y-4 lg:gap-y-8"
+	class="card medium-card flex select-none flex-col justify-center gap-y-4 lg:gap-y-8 "
 	style="height:{$timelineConfig.cardSize.height}px; width:{$timelineConfig.cardSize
 		.width}px; padding: {padding}px"
 	on:click={() => dispatch('click', { id })}
 >
-	<div class="flex h-2/3 w-full items-center justify-center overflow-hidden rounded-2xl">
-		<img {src} alt="Card Img" class="rounded-2xl object-cover" />
+	<div
+		class="flex h-2/3 w-full items-center justify-center overflow-hidden rounded-md sm:rounded-lg lg:rounded-2xl"
+	>
+		<img {src} alt="Card Img" class="object-cover" />
 	</div>
 	<div class="flex h-1/3 flex-col items-center gap-y-2 font-Poppins">
 		<p

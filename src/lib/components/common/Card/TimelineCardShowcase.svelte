@@ -19,7 +19,6 @@
 			(item: TimelineCardProps) => item.timelineData.id === id
 		)[0];
 		modalCarouselPropsStore.setModalContent(
-			props.timelineData.name,
 			props.timelineData.description,
 			props.timelineData.images
 		);

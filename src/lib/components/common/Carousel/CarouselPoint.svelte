@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class={'h-[0.35rem] hover:cursor-pointer ' + color}
+	class={'h-[0.2rem] sm:h-1 lg:h-[0.3rem] hover:cursor-pointer ' + color}
 	style="width:{width}px;"
 	on:click={() => dispatch('click', { pos })}
 />
