@@ -111,7 +111,7 @@ const createTimelineProps = () => {
 						id: 7,
 						name: 'graduated 3',
 						description: '',
-						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-graduated3.jpg'
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-graduated4.jpg'
 					}
 				]
 			}
@@ -134,13 +134,13 @@ const createTimelineProps = () => {
 						id: 8,
 						name: 'university 1',
 						description: '',
-						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu.jpg'
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu1.jpg'
 					},
 					{
-						id: 9,
+						id: 22,
 						name: 'university 2',
 						description: '',
-						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu2.jpg'
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu3.jpg'
 					}
 				]
 			}
@@ -220,15 +220,21 @@ const createTimelineProps = () => {
 				images: [
 					{
 						id: 15,
-						name: 'sgcu',
+						name: 'sgcu 1',
 						description: '',
 						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg'
 					},
 					{
 						id: 16,
-						name: 'sgcu',
+						name: 'sgcu 2',
 						description: '',
 						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-sgcu2.jpg'
+					},
+					{
+						id: 19,
+						name: 'sgcu 3',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-sgcu5.jpg'
 					}
 				]
 			}
