@@ -116,9 +116,8 @@
 	}
 
 	.btn-white {
-		@apply bg-white
-		text-black
-		hover:bg-mint-gradian
+		@apply hover:bg-gradient
+		bg-white text-black
 		hover:text-white;
 	}
 

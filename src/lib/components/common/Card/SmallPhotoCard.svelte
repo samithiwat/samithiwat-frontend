@@ -42,12 +42,12 @@
 	<div class="just flex flex-col font-Poppins">
 		<div class="flex items-center">
 			<Icon icon="ri:quill-pen-fill" class="h-3 w-3 xl:h-5 xl:w-5" />
-			<p class="text-3xs">
+			<p class="text-3xs xl:text-xs">
 				{desc}
 			</p>
 		</div>
 
-		<span class="flex flex-row items-center gap-x-1 text-3xs xl:text-3xs">
+		<span class="flex flex-row items-center gap-x-1 text-3xs xl:text-xs">
 			<Icon icon="ant-design:calendar-outlined" class="h-2 w-2 xl:h-3 xl:w-3" />
 			<p>{date}</p>
 			<Icon icon="ant-design:clock-circle-outlined" class="h-2 w-2  xl:h-3 xl:w-3" />

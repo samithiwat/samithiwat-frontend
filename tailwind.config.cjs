@@ -7,12 +7,14 @@ module.exports = {
 				'spin-slow': 'spin 10s linear infinite',
 				shakeY: 'shakeY 1.2s ease-in-out infinite',
 				shakeX: 'shakeX 1.2s ease-in-out infinite',
-				'shakeY-once': 'shakeY 1.2s ease-in-out',
+				'shakeY-once': 'shakeY 0.7s ease-in-out',
 				'shakeX-once': 'shakeX 0.7s ease-in-out',
 				rubberBand: 'rubberBand 500ms ease-in-out',
 				'fade-in': 'fade-in 3s ease-in-out',
 				'fade-out': 'fade-out 3s ease-in-out',
-				gradient: 'gradient 15s ease-in-out infinite'
+				gradient: 'gradient 15s ease-in-out infinite',
+				flip: 'flip 1s ease-in-out',
+				'bounce-in': 'bounce-in 0.5s ease-in-out'
 			},
 			backgroundImage: {
 				footer: "url('/images/background/footer-bg.png')",
@@ -68,8 +70,8 @@ module.exports = {
 					'50%': { transform: 'rotate(3deg)' }
 				},
 				shakeY: {
-					'0%, 100%': { transform: 'translateY(-10px)' },
-					'50%': { transform: 'translateY(0px)' }
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				},
 				shakeX: {
 					'0%': { transform: 'translateX(10px)' },
@@ -109,6 +111,34 @@ module.exports = {
 					},
 					'100%': {
 						'background-position': '0% 50%'
+					}
+				},
+				flip: {
+					'0%': {
+						transform: 'perspective(1000px) rotateY(0deg)'
+					},
+					'50%': {
+						transform: 'perspective(1000px) rotateY(180deg)'
+					},
+					'100%': {
+						transform: 'perspective(1000px) rotateY(0deg)'
+					}
+				},
+				'bounce-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'40%': {
+						opacity: '1'
+					},
+					'60%': {
+						transform: 'translateY(-10px) scale(1.25)'
+					},
+					'80%': {
+						transform: 'translateY(-5px) scale(0.75)'
+					},
+					'100%': {
+						transform: 'translateY(0px) scale(1)'
 					}
 				}
 			},

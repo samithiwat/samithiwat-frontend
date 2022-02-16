@@ -63,22 +63,21 @@
 							in:scale={{ duration: 800, start: 0.8 }}
 						/>
 					{/if}
-					<div class="flex flex-row gap-x-5 w-full">
+					<div class="animate-bounce-in flex flex-row gap-x-5 w-full">
 						{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
 							<div class="w-1/3" />
 						{/if}
 						<p
-							class="w-full sm:w-3/4 text-lg text-center sm:text-left sm:text-2xl lg:text-4xl xl:text-6xl font-bold text-white"
-							in:slide={{ duration: 100 }}
+							class="w-full sm:w-3/4 text-lg text-center sm:text-left sm:text-2xl lg:text-4xl xl:text-5xl font-bold text-white"
 						>
 							{$displayRepositoriesCardStore[$selectedPos]?.repository?.name}
 						</p>
 					</div>
-					<div class="flex flex-row gap-x-5 w-full">
+					<div class="animate-bounce-in flex flex-row gap-x-5 w-full">
 						{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
 							<div class="w-1/3" />
 						{/if}
-						<p class="text-base w-full sm:w-3/4 text-center sm:text-left lg:text-2xl text-white">
+						<p class=" text-base w-full sm:w-3/4 text-center sm:text-left lg:text-2xl text-white">
 							{$displayRepositoriesCardStore[$selectedPos]?.repository?.author}
 						</p>
 					</div>
@@ -106,7 +105,7 @@
 							class="my-4 sm:my-0 flex w-full sm:w-3/4 flex-row justify-between gap-x-1 sm:gap-x-0"
 						>
 							<span
-								class="flex flex-row w-full sm:justify-start sm:items-end items-center text-3xs justify-center gap-x-1 lg:text-xs xl:text-sm text-gray-secondary"
+								class="animate-shakeY-once flex flex-row w-full sm:justify-start sm:items-center items-center text-3xs justify-center gap-x-1 lg:text-xs xl:text-base text-gray-secondary"
 							>
 								Last update:
 
@@ -117,7 +116,7 @@
 							</span>
 							{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
 								<button
-									class="btn btn-white rounded-md text-3xs sm:text-sm md:text-xs sm:rounded-lg md:rounded-md flex h-6 md:h-5 lg:h-8 w-5/6 items-center md:w-24 lg:w-36 justify-center lg:gap-x-1 xl:gap-x-3"
+									class="btn btn-white rounded-md text-3xs sm:text-sm md:text-xs sm:rounded-lg md:rounded-md flex h-6 md:h-5 lg:h-8 w-5/6 items-center xl:rounded-xl xl:text-base xl:h-12 xl:w-56 md:w-24 lg:w-36 justify-center lg:gap-x-1 xl:gap-x-3"
 									on:click={() => {
 										window.open($displayRepositoriesCardStore[$selectedPos]?.repository?.url);
 									}}
