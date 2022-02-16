@@ -1,7 +1,9 @@
-import { Color } from '$lib/common/enums/common';
+import { Color, Default } from '$lib/common/enums/common';
 import { IconType } from '$lib/common/enums/timeline';
 import type { Timeline } from '$lib/common/interface/timeline';
 import type { TimelineCardProps } from '$lib/common/types/card';
+import type { Size } from '$lib/common/types/common';
+import type { TimelineProps } from '$lib/common/types/timeline';
 import moment from 'moment';
 import { writable } from 'svelte/store';
 
@@ -109,7 +111,7 @@ const createTimelineProps = () => {
 						id: 7,
 						name: 'graduated 3',
 						description: '',
-						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-graduated3.jpg'
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-graduated4.jpg'
 					}
 				]
 			}
@@ -132,13 +134,13 @@ const createTimelineProps = () => {
 						id: 8,
 						name: 'university 1',
 						description: '',
-						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu.jpg'
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu1.jpg'
 					},
 					{
-						id: 9,
+						id: 22,
 						name: 'university 2',
 						description: '',
-						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu2.jpg'
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-cu3.jpg'
 					}
 				]
 			}
@@ -218,15 +220,21 @@ const createTimelineProps = () => {
 				images: [
 					{
 						id: 15,
-						name: 'sgcu',
+						name: 'sgcu 1',
 						description: '',
 						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg'
 					},
 					{
 						id: 16,
-						name: 'sgcu',
+						name: 'sgcu 2',
 						description: '',
 						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-sgcu2.jpg'
+					},
+					{
+						id: 19,
+						name: 'sgcu 3',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-sgcu5.jpg'
 					}
 				]
 			}
@@ -292,5 +300,53 @@ const createTimelineProps = () => {
 	};
 };
 
+const createTimelineConfig = () => {
+	const { subscribe, set, update } = writable<TimelineProps>({
+		cardSize: {
+			height: Default.CARD_MEDIUM_HEIGHT,
+			width: Default.CARD_MEDIUM_WIDTH
+		},
+		iconSize: {
+			height: Default.ICON_HEIGHT,
+			width: Default.ICON_WIDTH
+		},
+		iconGap: Default.ICON_GAP
+	});
+
+	const setCardSize = (cardSize: Size) => {
+		update((oldProps: TimelineProps) => ({
+			iconSize: oldProps.iconSize,
+			iconGap: oldProps.iconGap,
+			cardSize
+		}));
+	};
+
+	const setIconSize = (iconSize: Size) => {
+		update((oldProps: TimelineProps) => ({
+			iconSize,
+			iconGap: oldProps.iconGap,
+			cardSize: oldProps.cardSize
+		}));
+	};
+
+	const setIconGap = (iconGap: number) => {
+		update((oldProps: TimelineProps) => ({
+			iconSize: oldProps.iconSize,
+			iconGap,
+			cardSize: oldProps.cardSize
+		}));
+	};
+
+	return {
+		subscribe,
+		set,
+		setCardSize,
+		setIconSize,
+		setIconGap,
+		update
+	};
+};
+
+export const timelineConfig = createTimelineConfig();
 export const timelineProps = createTimelineProps();
 export const timelineDatas = createTimelineData();

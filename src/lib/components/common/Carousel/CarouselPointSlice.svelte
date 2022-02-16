@@ -13,7 +13,6 @@
 	function handleClick(e: CustomEvent) {
 		const pos = e.detail.pos;
 		if (pos !== selectedPos) {
-			// selectedPos = pos;
 			dispatch('click', { pos });
 		}
 	}

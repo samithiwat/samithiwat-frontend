@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Direction } from '$lib/common/enums/common';
 	import { GithubClassName } from '$lib/common/enums/github-repo';
-	import { calCardSize, calMaxShown } from '$lib/common/function/card.function';
+	import { calSmallCardSize, calMaxShown } from '$lib/common/function/card.function';
 	import type { GithubCardProps } from '$lib/common/types/card';
 	import { innerWidth } from '$lib/stores/common.store';
 
@@ -89,7 +89,7 @@
 	}
 
 	onMount(async () => {
-		await cardShowCaseProps.setCardSize(calCardSize($innerWidth));
+		await cardShowCaseProps.setCardSize(calSmallCardSize($innerWidth));
 		await cardShowCaseProps.setMaxShown(calMaxShown($innerWidth));
 		$selectedPos = maxShown > 1 ? $selectedPos : 0;
 		$selectedPos = $selectedPos > maxShown - 1 ? 0 : $selectedPos;

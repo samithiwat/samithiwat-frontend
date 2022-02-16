@@ -27,6 +27,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Samithiwat.dev</title>
+</svelte:head>
+
 {#key $modalStatusStore}
 	{#if $modalStatusStore.isOpen}
 		<ModalRoot on:close={() => modalStatusStore.close()}>

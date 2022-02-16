@@ -5,13 +5,13 @@
 	import { Direction } from '$lib/common/enums/common';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { innerWidth } from '$lib/stores/common.store';
 
-	export let height = 365;
-	export let width = 650;
+	export let width = ($innerWidth * 7 * 4) / 12 / 5;
 	export let images: ModalImageProps[] = [];
-	let pointWidth = width / 5 / images.length;
+	let pointWidth = width / 3 / images.length;
 	let currentImageIdx = 0;
-	let counter;
+	let counter = null;
 
 	onMount(() => {
 		counter = setInterval(() => {
@@ -46,7 +46,7 @@
 	}
 </script>
 
-<div class="relative flex items-center text-white">
+<div class="relative flex h-full flex-row items-center overflow-hidden rounded-xl text-white ">
 	{#key currentImageIdx}
 		{#if images.length > 1}
 			<CarouselPointSlice
@@ -70,14 +70,17 @@
 				</div>
 			</div>
 		{/if}
-		<img
-			src={images[currentImageIdx].imgUrl}
-			alt="Carousel"
-			class="z-0 select-none rounded-xl object-cover"
-			in:fade={{
-				duration: 1400
-			}}
-			style="height:{height}px; width:{width}px; "
-		/>
+		<div
+			class="z-0 flex h-full w-full select-none flex-row items-stretch justify-center overflow-hidden rounded-xl object-cover"
+		>
+			<img
+				class="object-cover md:h-64 lg:h-72 lg:w-[32rem] xl:h-80 xl:w-[36rem]"
+				src={images[currentImageIdx].imgUrl}
+				alt="Carousel"
+				in:fade={{
+					duration: 1400
+				}}
+			/>
+		</div>
 	{/key}
 </div>
