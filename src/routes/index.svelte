@@ -7,9 +7,7 @@
 	import { innerWidth } from '$lib/stores/common.store';
 </script>
 
-<svelte:head>
-	<title>Samithiwat.dev</title>
-</svelte:head>
+
 
 <svelte:window bind:innerWidth={$innerWidth} />
 

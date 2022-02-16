@@ -1,9 +1,10 @@
 <script context="module" lang="ts">
 	/** @type {import('sveltejs/kit').Load}*/
-	export async function load({ url }) {
+	export async function load({ url, status }) {
 		return {
 			props: {
-				currentPath: url.pathname
+				currentPath: url.pathname,
+				status
 			}
 		};
 	}
@@ -21,11 +22,16 @@
 	import { innerWidth } from '$lib/stores/common.store';
 
 	export let currentPath: string;
+	export let status: number;
 
 	onMount(() => {
 		prefetchRoutes();
 	});
 </script>
+
+<svelte:head>
+	<title>Samithiwat.dev</title>
+</svelte:head>
 
 {#key $modalStatusStore}
 	{#if $modalStatusStore.isOpen}
