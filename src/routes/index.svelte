@@ -2,8 +2,17 @@
 	import { goto } from '$app/navigation';
 	import { Path } from '$lib/common/enums/common';
 
+	$: count = 5;
+	$: message = 'PRESS ANYKEY TO CONTINUE';
+
 	function goToLanding() {
-		goto(Path.LANDING);
+		setInterval(() => {
+			count--;
+			message = 'Go to home page in ' + count;
+			if (count === 0) {
+				goto(Path.LANDING);
+			}
+		}, 1000);
 	}
 </script>
 
@@ -15,7 +24,7 @@
 	>
 		<p class="text-3xl font-extrabold md:text-5xl lg:text-7xl 2xl:text-9xl">SAMITHIWAT.DEV</p>
 		<p class="animate-pulse text-sm md:text-xl lg:text-3xl 2xl:text-5xl">
-			PRESS ANYKEY TO CONTINUE
+			{message}
 		</p>
 	</div>
 </section>
