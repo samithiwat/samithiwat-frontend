@@ -115,7 +115,7 @@ const client: AxiosInstance = Axios.create({
 const getRepositories = async (): Promise<Repository[]> => {
 	try {
 		const response: AxiosResponse = await client.get('/users/samithiwat/repos');
-		return response.data.map((repo: GithubRepository, pos: number) => ({
+		return await response.data.map((repo: GithubRepository, pos: number) => ({
 			id: repo.id,
 			name: repo.name,
 			author: repo.owner.login,
