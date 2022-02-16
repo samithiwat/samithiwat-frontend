@@ -114,9 +114,9 @@
 				class="h-6 w-6 transform text-yellow-card transition duration-200 ease-in-out hover:-translate-x-1 hover:scale-110 active:-translate-x-4 sm:h-10 sm:w-10"
 			/>
 		</div>
-		{#key $cardShowCaseProps.maxShown}
-			{#each cards as props, pos}
-				{#key $offsetPos}
+		{#key maxShown}
+			{#key $offsetPos}
+				{#each cards as props, pos}
 					<div class="animate-shakeX-once">
 						<SmallPhotoCard
 							{pos}
@@ -132,8 +132,8 @@
 							on:click={handleCardClick}
 						/>
 					</div>
-				{/key}
-			{/each}
+				{/each}
+			{/key}
 		{/key}
 		<div
 			on:click={() => {
