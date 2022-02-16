@@ -27,7 +27,8 @@
 		</div>
 
 		<div class="absolute my-2 w-full sm:static sm:w-min">
-			<a href="/" class="z-0 text-2xl text-white sm:mx-20 2xl:text-4xl">Samithiwat.dev</a>
+			<a href={Path.LANDING} class="z-0 text-2xl text-white sm:mx-20 2xl:text-4xl">Samithiwat.dev</a
+			>
 		</div>
 
 		<div class="flex h-12 flex-row items-center justify-start gap-x-7 font-Poppins">
