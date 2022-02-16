@@ -10,16 +10,17 @@ module.exports = {
 				'shakeY-once': 'shakeY 1.2s ease-in-out',
 				'shakeX-once': 'shakeX 0.7s ease-in-out',
 				rubberBand: 'rubberBand 500ms ease-in-out',
-				disco: 'disco 7s ease-in-out infinite',
-				'disco-text': 'disco-text 4s ease-in-out infinite',
-				'disco-border': 'disco-border 4s ease-in-out infinite'
+				'fade-in': 'fade-in 3s ease-in-out',
+				'fade-out': 'fade-out 3s ease-in-out',
+				gradient: 'gradient 15s ease-in-out infinite'
 			},
 			backgroundImage: {
 				footer: "url('/images/background/footer-bg.png')",
 				hero: "url('/images/background/hero-bg.png')",
 				'selected-card':
 					'linear-gradient(64.16deg, #18CDCA 0%, #088CDA 33.33%, #82A0DC 60.42%, #EB5757 94.79%)',
-				main: 'linear-gradient(0deg, #2B2A2A, #2B2A2A)'
+				main: 'linear-gradient(0deg, #2B2A2A, #2B2A2A)',
+				'gradient-1': 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)'
 			},
 			borderRadius: {
 				'4xl': '2.5rem'
@@ -86,36 +87,31 @@ module.exports = {
 					'65%': { transform: 'scale(0.95)' },
 					'75%': { transform: 'scale(1.05)' }
 				},
-				disco: {
-					'0%, 100%': { background: '#18CDCA' },
-					'20%': { background: '#088CDA' },
-					'40%': { background: '#4F80E1' },
-					'60%': { background: '#EB5757' },
-					'80%': { background: '#FFBFBF' }
-				},
-				'disco-text': {
-					'0%, 100%': {
-						color: '#18CDCA'
+				'fade-in': {
+					'0%': {
+						opacity: '0'
 					},
-					'20%': {
-						color: '#088CDA'
-					},
-					'40%': {
-						color: '#4F80E1'
-					},
-					'60%': {
-						color: '#EB5757'
-					},
-					'80%': {
-						color: '#FFBFBF'
+					'100%': {
+						opacity: '1'
 					}
 				},
-				'disco-border': {
-					'0%, 100%': {
-						'border-color': '#088CDA'
+				'fade-out': {
+					'0%': {
+						opacity: '1'
+					},
+					'100%': {
+						opacity: '0'
+					}
+				},
+				gradient: {
+					'0%': {
+						'background-position': '0% 50%'
 					},
 					'50%': {
-						'border-color': '#EB5757'
+						'background-position': '100% 50%'
+					},
+					'100%': {
+						'background-position': '0% 50%'
 					}
 				}
 			},
