@@ -17,10 +17,7 @@ module.exports = {
 			backgroundImage: {
 				footer: "url('/images/background/footer-bg.png')",
 				hero: "url('/images/background/hero-bg.png')",
-				'selected-card':
-					'linear-gradient(64.16deg, #18CDCA 0%, #088CDA 33.33%, #82A0DC 60.42%, #EB5757 94.79%)',
-				main: 'linear-gradient(0deg, #2B2A2A, #2B2A2A)',
-				'gradient-1': 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)'
+				main: 'linear-gradient(0deg, #2B2A2A, #2B2A2A)'
 			},
 			borderRadius: {
 				'4xl': '2.5rem'
