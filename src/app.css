@@ -103,6 +103,10 @@
 		@apply text-sm md:text-xl lg:text-3xl 2xl:text-5xl;
 	}
 
+	.bg-gradient {
+		@apply animate-gradient bg-gradient-to-r from-mint-gradian via-purple-gradian to-red-gradian bg-[length:400%_400%];
+	}
+
 	.btn {
 		@apply select-none
 		rounded-2xl
