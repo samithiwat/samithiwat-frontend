@@ -9,7 +9,7 @@
 
 <svelte:window on:keydown={goToLanding} on:click={goToLanding} />
 
-<section class="bg-gradient relative z-0 h-screen w-full">
+<section class="bg-gradient relative z-0 h-screen w-full select-none">
 	<div
 		class="z-0 flex h-screen w-full animate-fade-in flex-col justify-center text-center font-Poppins text-white transition duration-1000"
 	>
