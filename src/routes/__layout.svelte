@@ -3,8 +3,7 @@
 	export async function load({ url, status }) {
 		return {
 			props: {
-				currentPath: url.pathname,
-				status
+				currentPath: url.pathname
 			}
 		};
 	}
@@ -22,7 +21,6 @@
 	import { innerWidth } from '$lib/stores/common.store';
 
 	export let currentPath: string;
-	export let status: number;
 
 	onMount(() => {
 		prefetchRoutes();
