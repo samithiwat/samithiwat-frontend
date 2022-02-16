@@ -7,8 +7,6 @@
 	import { innerWidth } from '$lib/stores/common.store';
 </script>
 
-
-
 <svelte:window bind:innerWidth={$innerWidth} />
 
 <div class="flex min-h-screen flex-col bg-main">

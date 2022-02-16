@@ -7,7 +7,7 @@
 	} from '$lib/stores/github-repository.store';
 	import { onMount } from 'svelte';
 	import moment from 'moment';
-	import { fade, scale, slide } from 'svelte/transition';
+	import { fade, scale } from 'svelte/transition';
 	import { offsetPos } from '$lib/stores/github-repository.store';
 	import { selectedPos } from '$lib/stores/github-repository.store';
 	import CardShowcase from '../common/Card/CardShowcase.svelte';
