@@ -5,7 +5,7 @@
 	import Sidebar from './Sidebar.svelte';
 	import { menuIconStore } from '$lib/stores/nav.store';
 	import { isError } from '$lib/stores/common.store';
-	import { Path } from '$lib/common/enums/path';
+	import { Path } from '$lib/common/enums/common';
 
 	export let paths: PagePath[];
 	export let currentPath: string;

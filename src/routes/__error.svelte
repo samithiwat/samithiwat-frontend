@@ -11,7 +11,7 @@
 
 <script>
 	import { goto } from '$app/navigation';
-	import { Path } from '$lib/common/enums/path';
+	import { Path } from '$lib/common/enums/common';
 	import { isError } from '$lib/stores/common.store';
 
 	import { onMount } from 'svelte';

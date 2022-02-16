@@ -55,3 +55,11 @@ export enum Default {
 	CARD_MEDIUM_HEIGHT = 450,
 	CARD_MEDIUM_WIDTH = 480
 }
+
+export enum Path {
+	PRELANDING = '/',
+	LANDING = '/landing',
+	ABOUT = '/about',
+	CONTACT = '/contact',
+	BLOG = '/blog'
+}
