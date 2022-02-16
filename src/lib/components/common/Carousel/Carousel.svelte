@@ -6,14 +6,16 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { innerWidth } from '$lib/stores/common.store';
+	import { calPointWidth } from '$lib/common/function/carousel.function';
 
 	export let width = ($innerWidth * 7 * 4) / 12 / 5;
 	export let images: ModalImageProps[] = [];
-	let pointWidth = width / 3 / images.length;
+	let pointWidth = width / 5 / images.length;
 	let currentImageIdx = 0;
 	let counter = null;
 
-	onMount(() => {
+	onMount(async () => {
+		pointWidth = calPointWidth($innerWidth, width, images.length);
 		counter = setInterval(() => {
 			handleChangePic(Direction.RIGHT);
 		}, 4000);
@@ -46,7 +48,7 @@
 	}
 </script>
 
-<div class="relative flex h-full flex-row items-center overflow-hidden rounded-xl text-white ">
+<div class="relative flex h-full flex-row items-center overflow-hidden rounded-xl text-white">
 	{#key currentImageIdx}
 		{#if images.length > 1}
 			<CarouselPointSlice
@@ -74,7 +76,7 @@
 			class="z-0 flex h-full w-full select-none flex-row items-stretch justify-center overflow-hidden rounded-xl object-cover"
 		>
 			<img
-				class="object-cover md:h-64 lg:h-72 lg:w-[32rem] xl:h-80 xl:w-[36rem]"
+				class="object-cover md:h-64 lg:h-72 lg:w-[32rem] xl:h-80 xl:w-[36rem] 2xl:h-100"
 				src={images[currentImageIdx].imgUrl}
 				alt="Carousel"
 				in:fade={{
