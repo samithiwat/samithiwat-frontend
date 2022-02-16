@@ -1,5 +1,6 @@
 import type { Repository } from '../interface/github-repo';
 import type { Timeline } from '../interface/timeline';
+import type { Size } from './common';
 
 type Card = {
 	id?: number;
@@ -26,4 +27,10 @@ export type GithubCardProps = SmallPhotoCardProps & {
 	repository: Repository;
 	cardClass: string;
 	titleColor: string;
+};
+
+export type CardShowcaseProps = {
+	cards: Card[];
+	maxShown: number;
+	cardSize: Size;
 };

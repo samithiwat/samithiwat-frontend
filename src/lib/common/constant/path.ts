@@ -1,4 +1,4 @@
-import { Path } from '../enums/path';
+import { Path } from '../enums/common';
 import type { PagePath } from '../types/path';
 
 export const paths: PagePath[] = [
