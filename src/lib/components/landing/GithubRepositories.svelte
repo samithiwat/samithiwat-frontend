@@ -1,4 +1,6 @@
 <script lang="ts">
+	// TODO: create a tech stack tag for each repository.
+
 	import Icon from '@iconify/svelte';
 	import {
 		cardShowCaseProps,
@@ -97,15 +99,36 @@
 							{$displayRepositoriesCardStore[$selectedPos]?.repository?.description}
 						</p>
 					</div>
-					<div class="flex flex-row gap-x-5 w-full sm:mt-2">
-						{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
-							<div class="w-1/3" />
-						{/if}
+					<div class="flex flex-col sm:flex-row gap-x-5 w-full sm:mt-2 ">
+						<div class="sm:w-1/3 flex flex-row gap-x-5 justify-center items-center px-5 sm:px-0">
+							<img
+								class="object-cover h-5 sm:h-1/2 w-1/2 rounded-md"
+								src="https://img.shields.io/badge/{$displayRepositoriesCardStore[$selectedPos]
+									?.repository?.framework.name}-{$displayRepositoriesCardStore[$selectedPos]
+									?.repository?.framework
+									.color}?style=for-the-badge&logo={$displayRepositoriesCardStore[$selectedPos]
+									?.repository?.framework.iconName}&logoColor={$displayRepositoriesCardStore[
+									$selectedPos
+								]?.repository?.framework.iconColor}"
+								alt=""
+							/>
+							<img
+								class="object-cover h-5 sm:h-1/2 w-1/2 rounded-md"
+								src="https://img.shields.io/badge/{$displayRepositoriesCardStore[$selectedPos]
+									?.repository?.language.name}-{$displayRepositoriesCardStore[$selectedPos]
+									?.repository?.language
+									.color}?style=for-the-badge&logo={$displayRepositoriesCardStore[$selectedPos]
+									?.repository?.language.iconName}&logoColor={$displayRepositoriesCardStore[
+									$selectedPos
+								]?.repository?.language.iconColor}"
+								alt=""
+							/>
+						</div>
 						<span
-							class="my-4 sm:my-0 flex w-full sm:w-3/4 flex-row justify-between gap-x-1 sm:gap-x-0"
+							class="gap-y-2 my-4 sm:my-0 flex w-full sm:w-3/4 flex-col items-center justify-center sm:flex-row sm:justify-between gap-x-1 sm:gap-x-0"
 						>
 							<span
-								class="animate-shakeY-once flex flex-row w-full sm:justify-start sm:items-center items-center text-3xs justify-center gap-x-1 lg:text-xs xl:text-base text-gray-secondary"
+								class="animate-shakeY-once flex flex-row w-full sm:justify-start items-center text-3xs justify-center gap-x-1 lg:text-xs xl:text-base text-gray-secondary"
 							>
 								Last update:
 
@@ -114,28 +137,16 @@
 								)}
 								{$displayRepositoriesCardStore[$selectedPos]?.repository?.time}
 							</span>
-							{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
-								<button
-									class="btn btn-white rounded-md text-3xs sm:text-sm md:text-xs sm:rounded-lg md:rounded-md flex h-6 md:h-5 lg:h-8 w-5/6 items-center xl:rounded-xl xl:text-base xl:h-12 xl:w-56 md:w-24 lg:w-36 justify-center lg:gap-x-1 xl:gap-x-3"
-									on:click={() => {
-										window.open($displayRepositoriesCardStore[$selectedPos]?.repository?.url);
-									}}
-								>
-									View <Icon icon="bx:bx-link-external" /></button
-								>
-							{/if}
+							<button
+								class="btn btn-white rounded-md gap-x-1 text-xs sm:text-sm md:text-xs sm:rounded-lg md:rounded-md flex h-6 md:h-5 lg:h-8 w-5/6 items-center xl:rounded-xl xl:text-base xl:h-12 xl:w-56 md:w-24 lg:w-36 justify-center lg:gap-x-1 xl:gap-x-3"
+								on:click={() => {
+									window.open($displayRepositoriesCardStore[$selectedPos]?.repository?.url);
+								}}
+							>
+								View <Icon icon="bx:bx-link-external" /></button
+							>
 						</span>
 					</div>
-					{#if $innerWidth < ScreenWidth.MOBILE_OVERALL}
-						<button
-							class="btn btn-white rounded-md text-xs gap-x-1 flex h-6 w-10/12 items-center justify-center"
-							on:click={() => {
-								window.open($displayRepositoriesCardStore[$selectedPos]?.repository?.url);
-							}}
-						>
-							View <Icon icon="bx:bx-link-external" /></button
-						>
-					{/if}
 				</div>
 			{/key}
 			{#key $innerWidth}

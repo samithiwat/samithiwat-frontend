@@ -1,4 +1,7 @@
-export interface Repository {
+import type { Color } from '../enums/common';
+import type { Base } from './common';
+
+export interface Repository extends Base {
 	id: number;
 	name: string;
 	author: string;
@@ -8,7 +11,20 @@ export interface Repository {
 	date: string;
 	time: string;
 	stars: number;
+	framework: FrameworkBadge;
+	language: LanguageBadge;
 }
+
+interface Badge {
+	name: string;
+	color: Color;
+	iconName: string;
+	iconColor: Color;
+}
+
+export interface FrameworkBadge extends Badge, Base {}
+
+export interface LanguageBadge extends Badge, Base {}
 
 export interface GithubRepository {
 	id: number;
