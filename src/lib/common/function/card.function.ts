@@ -2,10 +2,10 @@ import { ScreenWidth } from '../enums/common';
 import type { Size } from '../types/common';
 
 export function calMaxShown(width: number): number {
-	if (width > ScreenWidth.LABTOP_MEDIUM) {
+	if (width > ScreenWidth.LAPTOP_MEDIUM) {
 		return 5;
 	}
-	if (width > ScreenWidth.LABTOP_SMALL) {
+	if (width > ScreenWidth.LAPTOP_SMALL) {
 		return 4;
 	}
 	if (width > ScreenWidth.TABLET) {
@@ -18,14 +18,14 @@ export function calMaxShown(width: number): number {
 }
 
 export function calSmallCardSize(width: number): Size {
-	if (width > ScreenWidth.LABTOP_SMALL) {
+	if (width > ScreenWidth.LAPTOP_SMALL) {
 		return { height: 300, width: 225 };
 	}
 	return { height: 200, width: 150 };
 }
 
 export function calMediumCardSize(width: number): Size {
-	if (width > ScreenWidth.LABTOP_MEDIUM) {
+	if (width > ScreenWidth.LAPTOP_MEDIUM) {
 		return { height: 450, width: 480 };
 	}
 	if (width > ScreenWidth.TABLET) {

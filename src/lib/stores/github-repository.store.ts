@@ -1,7 +1,6 @@
 import { getRepositories } from '$lib/api/github';
-import type { Color } from '$lib/common/enums/common';
 import { GithubClassName } from '$lib/common/enums/github-repo';
-import type { GithubRepository, Repository } from '$lib/common/interface/github-repo';
+import type { Repository } from '$lib/common/interface/github-repo';
 import type { CardShowcaseProps, GithubCardProps } from '$lib/common/types/card';
 import type { Size } from '$lib/common/types/common';
 import { writable } from 'svelte/store';

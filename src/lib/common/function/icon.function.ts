@@ -2,10 +2,10 @@ import { ScreenWidth } from '../enums/common';
 import type { Size } from '../types/common';
 
 export function calIconSize(width: number): Size {
-	if (width > ScreenWidth.LABTOP_MEDIUM) {
+	if (width > ScreenWidth.LAPTOP_MEDIUM) {
 		return { height: 150, width: 150 };
 	}
-	if (width > ScreenWidth.LABTOP_SMALL) {
+	if (width > ScreenWidth.LAPTOP_SMALL) {
 		return { height: 100, width: 100 };
 	}
 	if (width > ScreenWidth.MOBILE_LARGE) {
