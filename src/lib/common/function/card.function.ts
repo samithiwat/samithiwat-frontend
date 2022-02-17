@@ -2,7 +2,7 @@ import { ScreenWidth } from '../enums/common';
 import type { Size } from '../types/common';
 
 export function calMaxShown(width: number): number {
-	if (width > ScreenWidth.LAPTOP_MEDIUM) {
+	if (width >= ScreenWidth.LAPTOP_LARGE) {
 		return 5;
 	}
 	if (width > ScreenWidth.LAPTOP_SMALL) {
