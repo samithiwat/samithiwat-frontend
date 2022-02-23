@@ -1,42 +1,16 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
 </script>
 
-<div
-	class="bg-header bg-cover bg-center flex flex-col justify-center text-center font-MuseoModerno w-full h-[25rem] sm:h-100 relative"
->
-	<h2 class="text-white text-3xl mobile-m:text-4xl sm:text-5xl 2xl:text-8xl">Hello, Visitor!</h2>
-	<h5 class="text-white text-base mobile-m:text-lg 2xl:text-3xl">
-		Welcome to my personnal website
-	</h5>
-
-	<span
-		class="flex flex-wrap sm:flex-row justify-center mt-8 mb-5 sm:my-12 2xl:my-8 px-20 mobile-m:px-28 mobile-l:px-32 sm:px-20 gap-x-5 gap-y-3 sm:gap-x-20"
+<div class="my-20 flex animate-shakeX-once select-none items-center justify-center">
+	<div class="bg-gradient absolute z-0 h-[32rem] w-9/12 blur-xl sm:h-96 lg:h-[49rem]" />
+	<div
+		class="z-20 flex h-[32rem] w-9/12 flex-col items-center justify-center rounded-2xl bg-gray-primary font-Poppins text-2xl shadow-lg transition duration-1000 ease-in-out mobile-m:text-3xl sm:h-100 sm:rounded-[2.5rem] md:text-4xl lg:h-200 lg:text-6xl"
 	>
-		<a href="https://www.linkedin.com/in/samithiwat/" target="_blank" class="">
-			<Icon
-				icon="akar-icons:linkedin-fill"
-				color="white"
-				class="w-16 sm:w-20 2xl:w-24 h-16 sm:h-20 2xl:h-24"
-			/>
-		</a>
-		<a href="https://github.com/samithiwat" target="_blank" class="">
-			<Icon
-				icon="akar-icons:github-fill"
-				color="white"
-				class="w-16 sm:w-20 2xl:w-24 h-16 sm:h-20 2xl:h-24"
-			/>
-		</a>
-		<a href="https://www.facebook.com/profile.php?id=80004633398479" target="_blank">
-			<Icon
-				icon="entypo-social:facebook"
-				color="white"
-				class="w-16 sm:w-20 2xl:w-24 h-16 sm:h-20 2xl:h-24"
-			/>
-		</a>
-		<a href="https://www.instagram.com/samithiwat/" target="_blank">
-			<Icon icon="bi:instagram" color="white" class="w-16 sm:w-20 2xl:w-24 h-16 sm:h-20 2xl:h-24" />
-		</a>
-	</span>
-	<h5 class="text-white text-xs sm:text-base 2xl:text-2xl">Keep in touch with me</h5>
+		<div
+			class="bg-gradient z-10 flex flex-col items-center bg-clip-text font-bold text-transparent transition"
+		>
+			<p>WELCOME TO</p>
+			<p>samithiwat.dev</p>
+		</div>
+	</div>
 </div>

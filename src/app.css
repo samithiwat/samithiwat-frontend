@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,50 +5,141 @@
 @layer base {
 	@font-face {
 		font-family: 'MuseoModerno';
-		src: url('/fonts/MuseoModerno-Regular.ttf');
+		src: url('/fonts/MuseoModerno/MuseoModerno-Regular.ttf');
+		font-weight: 400;
+	}
+	@font-face {
+		font-family: 'MuseoModerno';
+		src: url('/fonts/MuseoModerno/MuseoModerno-SemiBold.ttf');
+		font-weight: 600;
+	}
+	@font-face {
+		font-family: 'MuseoModerno';
+		src: url('/fonts/MuseoModerno/MuseoModerno-Bold.ttf');
+		font-weight: 700;
+	}
+	@font-face {
+		font-family: 'MuseoModerno';
+		src: url('/fonts/MuseoModerno/MuseoModerno-ExtraBold.ttf');
+		font-weight: 800;
+	}
+
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins/Poppins-Regular.ttf');
 		font-weight: 400;
 	}
 	@font-face {
 		font-family: 'Poppins';
-		src: url('/fonts/Poppins-Regular.ttf');
-		font-weight: 400;
+		src: url('/fonts/Poppins/Poppins-SemiBold.ttf');
+		font-weight: 600;
+	}
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins/Poppins-Bold.ttf');
+		font-weight: 700;
+	}
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins/Poppins-ExtraBold.ttf');
+		font-weight: 800;
 	}
 	@font-face {
 		font-family: 'Lato';
-		src: url('/fonts/Lato-Regular.ttf');
+		src: url('/fonts/Lato/Lato-Regular.ttf');
 		font-weight: 400;
+	}
+
+	img {
+		user-drag: none;
+		-webkit-user-drag: none;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+
+	body {
+		@apply bg-cover
+	bg-fixed
+	font-Poppins;
+	}
+
+	h1 {
+		@apply text-8xl
+	font-bold;
+	}
+
+	h2 {
+		@apply text-[4rem]
+	font-bold;
+	}
+
+	h3 {
+		@apply text-5xl
+	font-semibold;
+	}
+
+	h4 {
+		@apply text-4xl
+	font-semibold;
+	}
+
+	h5 {
+		@apply text-[1.75rem];
+	}
+
+	h6 {
+		@apply text-lg;
 	}
 }
 
-body {
-	@apply font-MuseoModerno
-	bg-cover
-	bg-fixed;
-}
-h1 {
-	@apply text-8xl
-	font-bold;
-}
-h2 {
-	@apply text-[4rem]
-	font-bold;
-}
-h3 {
-	@apply text-5xl
-	font-semibold;
-}
-h4 {
-	@apply text-4xl
-	font-semibold;
-}
-h5 {
-	@apply text-[1.75rem];
-}
-h6 {
-	@apply text-lg;
-}
-
 @layer components {
+	.topic {
+		@apply text-3xl font-extrabold md:text-5xl lg:text-7xl 2xl:text-9xl;
+	}
+
+	.sub-topic {
+		@apply text-sm md:text-xl lg:text-3xl 2xl:text-5xl;
+	}
+
+	.bg-gradient {
+		@apply animate-gradient bg-gradient-to-r from-mint-gradian via-purple-gradian to-red-gradian bg-[length:400%_400%];
+	}
+
+	.btn {
+		@apply select-none
+		rounded-2xl
+		font-semibold
+		transition
+		duration-[400ms];
+	}
+
+	.btn-white {
+		@apply hover:bg-gradient
+		bg-white text-black
+		hover:text-white;
+	}
+
+	.btn-mint {
+		@apply bg-mint-gradian
+		bg-gradient-to-r
+		text-white
+		hover:bg-white
+		hover:text-gray-primary;
+	}
+
+	.card {
+		@apply bg-yellow-card transition duration-500 hover:cursor-pointer hover:shadow-lg hover:shadow-amber-100;
+	}
+
+	.small-card {
+		@apply rounded-2xl hover:-translate-y-5;
+	}
+
+	.medium-card {
+		@apply rounded-md hover:animate-wiggle sm:rounded-lg lg:rounded-2xl;
+	}
 }
 
 @layer utilities {

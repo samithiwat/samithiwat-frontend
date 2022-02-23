@@ -1,0 +1,65 @@
+export enum Direction {
+	NONE = -1,
+	LEFT = 0,
+	RIGHT = 1
+}
+
+export enum Status {
+	ACTIVE = 'bg-mint-primary',
+	INACTIVE = 'bg-gray-secondary'
+}
+
+export enum Color {
+	GRAY_PRIMARY = '#373A3C',
+	GRAY_SECONDARY = '#BDBDBD',
+	GRAY_ICON = '#6D6D6D',
+
+	BLUE_PRIMARY = '#088CDA',
+	BLUE_ICON = '#357FA9',
+
+	YELLOW_ICON = '#F3CC3B',
+	YELLOW_CARD = '#FFFBEC',
+
+	MINT_PRIMARY = '#18CDCA',
+	MINT_GRADIAN = '#39C09B',
+
+	RED_GRADIAN = '#EB5757',
+
+	PURPLE_PRIMARY = '#82A0DC',
+	PURPLE_GRADIAN = '#4F80E1',
+
+	PINK_PRIMARY = '#FFBFBF',
+	PINK_SGCU_ICON = '#ED0387',
+	PINK_FECAMP_ICON = '#E37F7F'
+}
+
+export enum ScreenWidth {
+	MOBILE_SMALL = 350,
+	MOBILE_MEDIUM = 400,
+	MOBILE_LARGE = 450,
+	MOBILE_OVERALL = 640,
+	TABLET = 800,
+	LAPTOP_SMALL = 1050,
+	LAPTOP_MEDIUM = 1500,
+	LAPTOP_LARGE = 2560
+}
+
+export enum Default {
+	ICON_HEIGHT = 100,
+	ICON_WIDTH = 100,
+	ICON_GAP = 210,
+
+	CARD_SMALL_HEIGHT = 300,
+	CARD_SMALL_WIDTH = 225,
+
+	CARD_MEDIUM_HEIGHT = 450,
+	CARD_MEDIUM_WIDTH = 480
+}
+
+export enum Path {
+	PRELANDING = '/',
+	LANDING = '/landing',
+	ABOUT = '/about',
+	CONTACT = '/contact',
+	BLOG = '/blog'
+}

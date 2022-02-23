@@ -43,6 +43,12 @@ I'm a backend and DevOps engineering, mostly backend stuff, ambitious software e
 <a href="https://www.java.com/en/" target="_blank">
     <img src="https://img.shields.io/badge/Java-E76F00?style=for-the-badge&logo=java&logoColor=white">
 </a>
+<a href="https://go.dev" target="_blank">
+    <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white">
+</a>
+<a href="https://svelte.dev" target="_blank">
+    <img src="https://img.shields.io/badge/svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white">
+</a>
 <a href="https://www.cplusplus.com" target="_blank">
     <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white">
 </a>
@@ -63,7 +69,7 @@ I'm a backend and DevOps engineering, mostly backend stuff, ambitious software e
 <a href="https://reactjs.org" target="_blank">
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
 </a>
-<a href="https://svelte.dev" target="_blank">
+<a href="https://kit.svelte.dev" target="_blank">
     <img src="https://img.shields.io/badge/svelt--kit-FF3E00?style=for-the-badge&logo=svelte&logoColor=white">
 </a>
 </span>
@@ -76,6 +82,9 @@ I'm a backend and DevOps engineering, mostly backend stuff, ambitious software e
 </a>
 <a href="https://expressjs.com" target="_blank">
     <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white">
+</a>
+<a href="https://gofiber.io" target="_blank">
+    <img src="https://img.shields.io/badge/GO_FIBER-F2F2F2?style=for-the-badge&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAHgAAAAeCAYAAADnydqVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAa0SURBVHgB5VvNTuNWFD4OGTSbSpG66aYaz6p01aAZELBpeAKCpnvgCYAnIPMEwBOQ7CsxeYJJN4D4EWEzVVf1tKtKXXj4E%2BIn6fcZX2TCvdd24iGBflKw43t97Nzv3nO%2Bc2wceeYYHx%2BvYDOHj4tPs91uL%2Bzt7TXlfwJHBgSlUqlwcXFRkAzw8uVLv9Fo%2BGNjY1XHceaibSDYv7q6et1sNn3bNZUNeeLIy4Dg9PR0BZslyQCwVcbK5eSd62wD4YXh4eEZ7NZOTk5KuVxuU2fj7OyshM1v8sSRk8FBUTICSPyMlfrK1N5qtfyw308WM1%2FkGeBZEswYOzQ0dGRo9vb39%2Bvcweo1XdN%2FLnF6IAguFouMg5nEXyAgZmdnp4FVXOto8y4vL6fVF7S7OgM47skzwUDE4Hw%2Bn9nqBTy1g1U4Pzk5uXFzc%2BOSNHzvjKnFOBtPHQNBMGMhCDA1V9DekISAQr7nmre3t0nqA7EEhW2bVM8mjRoIgk2ukgC59bTxMEn6A6HlIgabTDSjtqDKi%2BEkLGDrI77XEQI8SYmJiQkXIYLKPRCAtIX7%2BPzixYtmnD1OSF6%2F8zhtqPHhvR4fH5dpX91nLMHfbn4q5yW3KlkjJ0v%2FzIzUw2%2FG1dSN2EmS%2FtgUNFU4t2%2Ffvl1C%2FxWmVuHxoB0ufw1tDYSWhSREg5xFbMo4r4RBv9fGSYbj7NOE%2FbXd3d2awcyhun4HmFo21b3C%2Ft0kuL6%2B9qwEf7f5u9sSZ7V9WwXKFK2boWgRwURwV64Sg%2FazqU25cCpoU1jgpGKRRDR5tAIGuwRiDtFv2jQJuerQb9PmoSLg%2FVRBVBEqf7nTjuW8Jqt1OHdFc4%2B%2BleDrllN2coHg8CRDOOL41851sEpiFLQn3cGY%2FrCCxR2Lgia5a2IhNwK67E38hlFlVwE25rFZ1blVG2BvCSRLlOSYcFLGNbQFIk5mK8H%2FvhvhD12Tr4gYBd2t2NEOKsmLfNVeFwNclBQ5OScKYignw7o6FpK7IV0iJLkOkhvhd1s4KRs8kcdJ13eRFaeg8UMrkgxlFjBCj2AiLyA4xuVFwf4%2B7q%2Bo4rAOaC9LSDCFFFy3jdwqVmSDO1iVJWzmDf3oclU%2FYziJy%2BUDgr%2F59VMZv35GHgmtttM8%2B2VkXcSuoNNACaMYj%2BAF17e7PILELqm8GZOGq5SizTRxXLUP2x8NNj24zFmsqqgXqWGy8RobGpt310owRh6FHwTWnW0IrNvxKEBI3bRxgXZmlaRYOE4r6vYTu0MblNCJDrYGqo%2BtBk0ipqMxFfsePMkyzjOR5%2FIPXbOJjNCmJw%2Fvu4rzmKV0jn9hamrq1dbWFomyjVEVtpc7NYBC%2FqYlK20HP%2FwRHxw6V%2FcKD1kQHF0VRvKSKGhgVjdYjIcggsdtC2FRd5CxH%2Fl34L517Vh9Rrsx4YTVuQVLu%2BRP3v1o7fA1kWEN2ouaNfRJpKBBpE3YGYkIY69RuKHtT0mJ8%2FPzL3C7o6ZwgnBQibPRV5Fli5cY7A%2FYfJAEwOBFy5NFg70kCroh3YEvERRj4npqcEIiNBg9Eq53FGejZ4Ld22LISopT%2FL9mR4IcLyz9aTvheFU91ksKm0dIoqCxIuLSMld3kIo1Jq53g8DbxBVk4oz0THA7KGMGaULC%2FrfSn8CgGCtOShWnQa8KGsc908lYSSVTWzh5XDGjIenh8Y8tnEgC9ETw95t%2FlNvSLkq6ilO0b6Y1aJtHkAQK2lZ16ny3KwrmtWFOq7PZgCealu7R0yPNngj%2Be%2FaHxHHSANOApiaX6LUGLbeD%2BSAshAJq3nQS2uomgntBFo80%2ByaybBUn6UMNmmCJEPe1Hk2TSK6leEFUQzHk6bwHFTR%2Fqy71CieO1jYm5GjSR5o29I3gQatBq%2FOHh4cP37x5E4hApChMbxYtdn1UjN6H%2B0eG8FBAFewjyJyNPlpkTAeBrGC5mnOqcQo6qUbpG8FJ4mUaZFWD5gpXz5ItrlxhTVWnMBEYh015cpAH85kvJ0VYhizo7EcnTa8KOrAhfUK%2FFLSpA8WQpAPTuPfqC1ccH9jHnMOHFiWxFHf4nxdq0vSqoIl%2BvlWZuYK2NMcqaKwaVvR8SYYm67%2BdB3d3d0l4TboAVy42pYODg6ho7Vmj9JPgR1PQEr7EbnsPmqsGKzxJ2XYNE3DUVNznm5yYSBVJhyom2OvoW59ZvRTYz1KlNsXq4Z3kI5xb0TWo%2BjLa6zr3pq7J1YNY%2FhqiiJU5xj%2BXr72E7Q2QsG4iNgquZNipMXWCUJvTPE%2F2eB%2FMn%2FGp6WziPMbiis4%2BX0SUhPgPQXTOIcXAzJ0AAAAASUVORK5CYII%3D&logoColor=white">
 </a>
 <a href="https://spring.io" target="_blank">
     <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
@@ -107,7 +116,9 @@ I'm a backend and DevOps engineering, mostly backend stuff, ambitious software e
 
 ## Github Stats
 
-![](https://github-readme-stats.vercel.app/api?username=samithiwat&hide=stars&count_private=true&show_icons=true&theme=monokai&custom_title=My%20Progress)
+![samithiwat's github stats](https://github-readme-stats.vercel.app/api?username=samithiwat&hide=stars&count_private=true&show_icons=true&theme=monokai&custom_title=My%20Progress)
+[![samithiwat's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=samithiwat&theme=monokai&layout=compact&hide_border=true&v=2)
+](https://wakatime.com/dashboard)
 
 <p align="left">
     <img src="https://raw.githubusercontent.com/samithiwat/profile-decoration/master/profile-summary-card-output/monokai/2-most-commit-language.svg"/>
