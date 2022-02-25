@@ -1,6 +1,6 @@
 export type AboutMeProps = {
 	name: string;
-	desc: string;
+	description: string;
 	content: string;
 	imgUrl: string;
 };

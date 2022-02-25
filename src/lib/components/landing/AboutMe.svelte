@@ -38,7 +38,7 @@
 					<p
 						class="text-center text-2xs font-semibold text-white mobile-l:text-xs md:text-xl lg:text-left lg:text-base xl:text-2xl"
 					>
-						{$aboutmeProps.desc}
+						{$aboutmeProps.description}
 					</p>
 				</span>
 				<p class="h-3/5 text-2xs text-gray-secondary sm:text-xs lg:text-sm xl:text-base">
