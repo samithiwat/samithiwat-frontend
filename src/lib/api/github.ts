@@ -57,13 +57,29 @@ const MockData = [
 	{
 		framework: {
 			id: 4,
+			name: 'Nestjs',
+			color: 'E0234E' as Color,
+			iconName: 'Nestjs',
+			iconColor: 'white' as Color
+		},
+		language: {
+			id: 4,
+			name: 'Typescript',
+			color: '007ACC' as Color,
+			iconName: 'Typescript',
+			iconColor: 'white' as Color
+		}
+	},
+	{
+		framework: {
+			id: 5,
 			name: 'Fiber',
 			color: 'fff' as Color,
 			iconName: '-',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 4,
+			id: 5,
 			name: 'Go',
 			color: '00ADD8' as Color,
 			iconName: 'GO',
@@ -72,14 +88,30 @@ const MockData = [
 	},
 	{
 		framework: {
-			id: 5,
+			id: 6,
+			name: 'Spring_Boot',
+			color: '6DB33F' as Color,
+			iconName: 'springboot',
+			iconColor: 'white' as Color
+		},
+		language: {
+			id: 6,
+			name: 'Java',
+			color: 'E76F00' as Color,
+			iconName: 'Java',
+			iconColor: 'white' as Color
+		}
+	},
+	{
+		framework: {
+			id: 7,
 			name: 'Svelte--Kit',
 			color: 'FF3E00' as Color,
 			iconName: 'svelte',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 5,
+			id: 7,
 			name: 'Svelte',
 			color: 'FF3E00' as Color,
 			iconName: 'svelte',
@@ -88,14 +120,14 @@ const MockData = [
 	},
 	{
 		framework: {
-			id: 6,
+			id: 8,
 			name: 'Nestjs',
 			color: 'E0234E' as Color,
 			iconName: 'nestjs',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 6,
+			id: 8,
 			name: 'Typescript',
 			color: '007ACC' as Color,
 			iconName: 'typescript',
