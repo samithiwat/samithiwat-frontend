@@ -105,13 +105,29 @@ const MockData = [
 	{
 		framework: {
 			id: 7,
+			name: 'Nextjs',
+			color: '000000' as Color,
+			iconName: 'nextjs',
+			iconColor: 'white' as Color
+		},
+		language: {
+			id: 7,
+			name: 'Typescript',
+			color: '007ACC' as Color,
+			iconName: 'typescript',
+			iconColor: 'white' as Color
+		}
+	},
+	{
+		framework: {
+			id: 8,
 			name: 'Svelte--Kit',
 			color: 'FF3E00' as Color,
 			iconName: 'svelte',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 7,
+			id: 8,
 			name: 'Svelte',
 			color: 'FF3E00' as Color,
 			iconName: 'svelte',
@@ -120,14 +136,14 @@ const MockData = [
 	},
 	{
 		framework: {
-			id: 8,
+			id: 9,
 			name: 'Nestjs',
 			color: 'E0234E' as Color,
 			iconName: 'nestjs',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 8,
+			id: 9,
 			name: 'Typescript',
 			color: '007ACC' as Color,
 			iconName: 'typescript',
