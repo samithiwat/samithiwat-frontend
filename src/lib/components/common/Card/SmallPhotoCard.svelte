@@ -8,7 +8,7 @@
 	export let time = '12:00 AM';
 	export let height = 400;
 	export let width = 300;
-	export let src = 'https://storage.googleapis.com/fe-camp/FE-Camp-Shop-Icon.png';
+	export let src = 'https://storage.googleapis.com/samithiwat-bucket/samithiwat-icon-3.png';
 	let imgResolution = 0.83 * width;
 	let padding = 0.083 * width;
 
