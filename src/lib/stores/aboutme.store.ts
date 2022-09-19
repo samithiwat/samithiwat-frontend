@@ -6,7 +6,8 @@ const createAboutMeProps = () => {
 		name: 'Samithiwat Boonchai',
 		description: 'Software Engineer, Backend & Devops',
 		content:
-			"Greetings! my name is Samithiwat Boonchai, a 2nd-year Computer Engineering student, at Chulalongkorn University. I'm a backend and DevOps, mostly backend stuff, ambitious software engineering. I love to collaborate with others. At this time I'm looking for a part-time job please contact me if you are interesting I hope experience and skill are exactly what you are looking for. looking forward to meet you!",
+			'Greetings, my name is Samithiwat Boonchai, a 3nd-year Computer Engineering student, at Chulalongkorn University. ' +
+			'I love coding and doing a project that can make an impact on others looking forward to meeting you.',
 		imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/about-me-protrait.png'
 	});
 

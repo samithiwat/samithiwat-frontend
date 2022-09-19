@@ -5,7 +5,7 @@ import moment from 'moment';
 
 // FIXME: This is a temporary solution to get the store to work.
 
-const MockData = [
+const mockData = [
 	{
 		framework: {
 			id: 1,
@@ -16,9 +16,9 @@ const MockData = [
 		},
 		language: {
 			id: 1,
-			name: 'NONE',
-			color: 'fff' as Color,
-			iconName: '-',
+			name: 'Go',
+			color: '00ADD8' as Color,
+			iconName: 'GO',
 			iconColor: 'white' as Color
 		}
 	},
@@ -32,6 +32,22 @@ const MockData = [
 		},
 		language: {
 			id: 2,
+			name: 'NONE',
+			color: 'fff' as Color,
+			iconName: '-',
+			iconColor: 'white' as Color
+		}
+	},
+	{
+		framework: {
+			id: 3,
+			name: 'NONE',
+			color: 'fff' as Color,
+			iconName: '-',
+			iconColor: 'white' as Color
+		},
+		language: {
+			id: 3,
 			name: 'Java',
 			color: 'E76F00' as Color,
 			iconName: 'java',
@@ -40,40 +56,24 @@ const MockData = [
 	},
 	{
 		framework: {
-			id: 3,
+			id: 4,
 			name: 'NONE',
 			color: 'fff' as Color,
 			iconName: '-',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 3,
+			id: 4,
 			name: 'NONE',
 			color: 'fff' as Color,
 			iconName: '-',
-			iconColor: 'white' as Color
-		}
-	},
-	{
-		framework: {
-			id: 4,
-			name: 'Nestjs',
-			color: 'E0234E' as Color,
-			iconName: 'Nestjs',
-			iconColor: 'white' as Color
-		},
-		language: {
-			id: 4,
-			name: 'Typescript',
-			color: '007ACC' as Color,
-			iconName: 'Typescript',
 			iconColor: 'white' as Color
 		}
 	},
 	{
 		framework: {
 			id: 5,
-			name: 'Fiber',
+			name: 'NONE',
 			color: 'fff' as Color,
 			iconName: '-',
 			iconColor: 'white' as Color
@@ -89,13 +89,29 @@ const MockData = [
 	{
 		framework: {
 			id: 6,
+			name: 'Nestjs',
+			color: 'E0234E' as Color,
+			iconName: 'Nestjs',
+			iconColor: 'white' as Color
+		},
+		language: {
+			id: 6,
+			name: 'Typescript',
+			color: '007ACC' as Color,
+			iconName: 'Typescript',
+			iconColor: 'white' as Color
+		}
+	},
+	{
+		framework: {
+			id: 7,
 			name: 'Spring_Boot',
 			color: '6DB33F' as Color,
 			iconName: 'springboot',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 6,
+			id: 7,
 			name: 'Java',
 			color: 'E76F00' as Color,
 			iconName: 'Java',
@@ -104,14 +120,46 @@ const MockData = [
 	},
 	{
 		framework: {
-			id: 7,
+			id: 8,
+			name: 'Fiber',
+			color: 'fff' as Color,
+			iconName: '-',
+			iconColor: 'white' as Color
+		},
+		language: {
+			id: 8,
+			name: 'Go',
+			color: '00ADD8' as Color,
+			iconName: 'GO',
+			iconColor: 'white' as Color
+		}
+	},
+	{
+		framework: {
+			id: 9,
+			name: 'Fiber',
+			color: 'fff' as Color,
+			iconName: '-',
+			iconColor: 'white' as Color
+		},
+		language: {
+			id: 9,
+			name: 'Go',
+			color: '00ADD8' as Color,
+			iconName: 'GO',
+			iconColor: 'white' as Color
+		}
+	},
+	{
+		framework: {
+			id: 10,
 			name: 'Nextjs',
 			color: '000000' as Color,
 			iconName: 'nextjs',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 7,
+			id: 10,
 			name: 'Typescript',
 			color: '007ACC' as Color,
 			iconName: 'typescript',
@@ -120,14 +168,14 @@ const MockData = [
 	},
 	{
 		framework: {
-			id: 8,
+			id: 11,
 			name: 'Svelte--Kit',
 			color: 'FF3E00' as Color,
 			iconName: 'svelte',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 8,
+			id: 11,
 			name: 'Svelte',
 			color: 'FF3E00' as Color,
 			iconName: 'svelte',
@@ -136,14 +184,30 @@ const MockData = [
 	},
 	{
 		framework: {
-			id: 9,
+			id: 12,
+			name: 'NONE',
+			color: 'fff' as Color,
+			iconName: '-',
+			iconColor: 'white' as Color
+		},
+		language: {
+			id: 12,
+			name: 'NONE',
+			color: 'fff' as Color,
+			iconName: '-',
+			iconColor: 'white' as Color
+		}
+	},
+	{
+		framework: {
+			id: 13,
 			name: 'Nestjs',
 			color: 'E0234E' as Color,
 			iconName: 'nestjs',
 			iconColor: 'white' as Color
 		},
 		language: {
-			id: 9,
+			id: 13,
 			name: 'Typescript',
 			color: '007ACC' as Color,
 			iconName: 'typescript',
@@ -151,6 +215,12 @@ const MockData = [
 		}
 	}
 ];
+
+const MockData = mockData.map((value, pos) => {
+	value.framework.id = pos + 1;
+	value.language.id = pos + 1;
+	return value;
+});
 
 const client: AxiosInstance = Axios.create({
 	baseURL: 'https://api.github.com',

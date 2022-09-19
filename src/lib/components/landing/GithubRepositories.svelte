@@ -59,7 +59,7 @@
 				<div class="flex flex-col items-center w-full sm:px-10 my-5 gap-y-2">
 					{#if $innerWidth < ScreenWidth.MOBILE_OVERALL}
 						<img
-							src="https://storage.googleapis.com/fe-camp/Annonymous-Icon.png"
+							src="https://storage.googleapis.com/samithiwat-bucket/samithiwat-icon-2-white.png"
 							alt="Repository Cover"
 							class="w-1/3 h-auto rounded-lg md:rounded-3xl xl:rounded-4xl overflow-hidden"
 							in:scale={{ duration: 800, start: 0.8 }}
@@ -86,7 +86,7 @@
 					<div class="flex flex-row gap-x-5 w-full px-5 sm:px-0">
 						{#if $innerWidth > ScreenWidth.MOBILE_OVERALL}
 							<img
-								src="https://storage.googleapis.com/fe-camp/Annonymous-Icon.png"
+								src="https://storage.googleapis.com/samithiwat-bucket/samithiwat-icon-2-white.png"
 								alt="Repository Cover"
 								class="w-1/3 h-auto rounded-lg md:rounded-3xl xl:rounded-4xl overflow-hidden"
 								in:scale={{ duration: 800, start: 0.8 }}
