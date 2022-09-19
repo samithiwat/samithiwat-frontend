@@ -45,11 +45,11 @@
 					{$aboutmeProps.content}
 				</p>
 				<div class=" flex w-full flex-row items-end justify-end">
-					<button
-						class="btn btn-white flex h-5 w-20 flex-row items-center justify-center gap-x-1 rounded text-3xs sm:h-6 sm:text-xs md:h-8 md:w-28 md:gap-x-2 md:rounded-md lg:h-8 lg:w-32 lg:rounded-lg lg:text-sm xl:h-10 xl:w-40 xl:text-base"
-					>
-						Read more <Icon icon="bi:arrow-right" /></button
-					>
+					<!--					<button-->
+					<!--						class="btn btn-white flex h-5 w-20 flex-row items-center justify-center gap-x-1 rounded text-3xs sm:h-6 sm:text-xs md:h-8 md:w-28 md:gap-x-2 md:rounded-md lg:h-8 lg:w-32 lg:rounded-lg lg:text-sm xl:h-10 xl:w-40 xl:text-base"-->
+					<!--					>-->
+					<!--						Read more <Icon icon="bi:arrow-right" /></button-->
+					<!--					>-->
 				</div>
 			</div>
 		</div>

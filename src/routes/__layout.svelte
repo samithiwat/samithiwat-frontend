@@ -43,7 +43,7 @@
 
 <svelte:window bind:innerWidth={$innerWidth} />
 
-<Nav {paths} {currentPath} />
+<!--<Nav {paths} {currentPath} />-->
 <main>
 	<slot />
 </main>
