@@ -35,19 +35,19 @@
 					<div class="w-1/3" />
 					<div class="w-1/3" />
 					<div class="flex w-1/3 flex-row justify-center">
-						<button
-							class="btn btn-white flex items-center justify-center gap-x-1 sm:h-6 sm:w-20 sm:rounded-lg sm:text-2xs lg:h-8 lg:w-24 lg:text-xs 2xl:h-12 2xl:w-36 2xl:text-base"
-							>Read more <Icon icon="bi:arrow-right" /></button
-						>
+<!--						<button-->
+<!--							class="btn btn-white flex items-center justify-center gap-x-1 sm:h-6 sm:w-20 sm:rounded-lg sm:text-2xs lg:h-8 lg:w-24 lg:text-xs 2xl:h-12 2xl:w-36 2xl:text-base"-->
+<!--							>Read more <Icon icon="bi:arrow-right" /></button-->
+<!--						>-->
 					</div>
 				{:else}
 					<div class="flex flex-row w-full ">
 						<div class="w-1/2" />
 						<div class="w-1/2 flex flex-row justify-center">
-							<button
-								class="text-2xs rounded-md h-5 w-20 btn btn-white flex items-center justify-center gap-x-[0.125rem] "
-								>Read more <Icon icon="bi:arrow-right" /></button
-							>
+<!--							<button-->
+<!--								class="text-2xs rounded-md h-5 w-20 btn btn-white flex items-center justify-center gap-x-[0.125rem] "-->
+<!--								>Read more <Icon icon="bi:arrow-right" /></button-->
+<!--							>-->
 						</div>
 					</div>
 				{/if}
