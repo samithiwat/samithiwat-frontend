@@ -30,7 +30,9 @@ export enum Color {
 
 	PINK_PRIMARY = '#FFBFBF',
 	PINK_SGCU_ICON = '#ED0387',
-	PINK_FECAMP_ICON = '#E37F7F'
+	PINK_FECAMP_ICON = '#E37F7F',
+
+	WHITE = '#FFFFFF',
 }
 
 export enum ScreenWidth {
