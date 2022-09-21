@@ -273,7 +273,7 @@ const createTimelineProps = () => {
 				iconBgColor: Color.YELLOW_CARD,
 				name: 'NITAD 18',
 				description:
-					'In the end of 2021, It is a concurency of FE Camp, I got a chance to join the NITAD 18 in IT team. I working as a Backend Tech Lead and devops of this project. My job is almost same as FE Camp, creating backlogs, review code and merge it.',
+					'In the end of 2021, It is a parallel of FE Camp, I got a chance to join the NITAD 18 in IT team. I working as a Backend Tech Lead and devops of this project. My job is almost same as FE Camp, creating backlogs, review code and merge it.',
 				eventDate: moment().toDate(),
 				slug: 'primary-school',
 				thumbnail: 'https://storage.googleapis.com/samithiwat-bucket/timeline-nitad-Background.svg',
@@ -286,7 +286,164 @@ const createTimelineProps = () => {
 					}
 				]
 			}
+		},
+		{
+			date: 'MAY 2022',
+			timelineData: {
+				id: 10,
+				icon: 'svg/wongnai_logo.svg',
+				iconType: IconType.SVG,
+				iconBgColor: Color.WHITE,
+				name: 'LINEMAN WONGNAI INTERNSHIP',
+				description:
+					'In the summer of 2022, I got a chance to be the Java Backend, Internship at Lineman Wongnai Co, I was assigned to the payout team. In this internship program, I got a very fascinating experience because I did a job that deployed to the production with the around 20M of users',
+				eventDate: moment().toDate(),
+				slug: 'lmwn-intern',
+				thumbnail: 'https://storage.googleapis.com/samithiwat-bucket/timeline-wongnai-Background.svg',
+				images: [
+					{
+						id: 19,
+						name: 'lmwn-intern',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-wongnai-Background.svg'
+					},				{
+						id: 20,
+						name: 'lmwn-certificate',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/lmwn-2022/intern-certificate.png'
+					}
+				]
+			}
+		},
+		{
+			date: 'JULY 2022',
+			timelineData: {
+				id: 11,
+				icon: 'svg/sgcu_logo.svg',
+				iconType: IconType.SVG,
+				iconBgColor: Color.PINK_SGCU_ICON,
+				name: 'ISD TEAM SGCU 65',
+				description:
+				'After my hard-working at ISD Team in the last year. finally, I got promoted to the president of the ISD Team of Student Government of Chulalongkorn University. I am very excited to be responsible for the higher scale of the project, previously was only the back office team',
+				eventDate: moment().toDate(),
+				slug: 'sgcu-2022',
+				thumbnail: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg',
+				images: [
+					{
+						id: 21,
+						name: 'sgcu-0',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-SGCU-Background.svg'
+					},
+				]
+			}
+		},
+		{
+			date: 'JULY 2022',
+			timelineData: {
+				id: 12,
+				icon: 'svg/rnkm_logo.svg',
+				iconType: IconType.SVG,
+				iconBgColor: Color.WHITE,
+				name: 'FRESHER FAIRS OFFICIAL WEBSITE',
+				description:
+				"The Fresher Fairs website is the registration platform for fresher fairs events that are held at Chulalongkorn University. In this project, I am the Technical Lead of Backend and it is a good starting with my new position and also the good chance to get to know and training new members. This project was going well and for me, it is very successfully with users around 29K",
+				eventDate: moment().toDate(),
+				slug: 'rnkm-2022',
+				thumbnail: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/rnkm-2022/cover.png',
+				images: [
+					{
+						id: 22,
+						name: 'rnkm-2022-cover',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/rnkm-2022/cover.png'
+					},
+					{
+						id: 23,
+						name: 'rnkm-2022-login',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/rnkm-2022/login.png'
+					},
+					{
+						id: 24,
+						name: 'rnkm-2022-all-user',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/rnkm-2022/all-users.png'
+					},
+				]
+			}
+		},
+		{
+			date: 'JULY 2022',
+			timelineData: {
+				id: 13,
+				icon: 'svg/thinc_logo.svg',
+				iconType: IconType.SVG,
+				iconBgColor: Color.GRAY_ICON,
+				name: 'THINC CLUB',
+				description:
+					"This year I was elected to be the next president of Thinc. I am very proud to get this position because I know the potential of my club that can make an impact on Chulalongkorn University and I hope I will do well as the Thinc. Alumni",
+				eventDate: moment().toDate(),
+				slug: 'thinc-2022',
+				thumbnail: 'https://storage.googleapis.com/samithiwat-bucket/timeline-Thinc-Background.svg',
+				images: [
+					{
+						id: 26,
+						name: 'thinc-cover',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-Thinc-Background.svg'
+					},
+					{
+						id: 27,
+						name: 'firstmeet-2022',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/thinc-2022/firstmeet-2022.jpg'
+					},
+					{
+						id: 28,
+						name: 'firstact-frontend-2022',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/thinc-2022/firstact-frontend-2022.jpg'
+					},
+					{
+						id: 29,
+						name: 'firstact-pm-2022',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/thinc-2022/firstact-pm.jpg'
+					}
+				]
+			}
+		},
+		{
+			date: 'AUGUST 2022',
+			timelineData: {
+				id: 14,
+				icon: 'svg/newbie_logo.svg',
+				iconType: IconType.SVG,
+				iconBgColor: Color.WHITE,
+				name: 'CU NEWBIE',
+				description:
+					"In summer 2021 Thinc. was released to the CU Get Reg, the timetable planning platform. It was receive a very good response from the Chulalongkorn University Students. This thing is inspiring me to create the next project for Thinc. that can make an impact on Chulalongkorn University. The Newbie is the platform that will help non-experienced students, an intern, or new graduates, to find their job. I'm the founder of this project and also the technical lead of the backend team I hope this project will make a great impact like CU Get Reg do.",
+				eventDate: moment().toDate(),
+				slug: 'cu-newbie',
+				thumbnail: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/newbie/cover.png',
+				images: [
+					{
+						id: 30,
+						name: 'newbie-cover',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/newbie/cover.png'
+					},
+					{
+						id: 31,
+						name: 'newbie-coming-soon',
+						description: '',
+						imgUrl: 'https://storage.googleapis.com/samithiwat-bucket/timeline-background/newbie/newbie-coming-soon.png'
+					},
+				]
+			}
 		}
+
 	]);
 
 	const setProps = (props: TimelineCardProps[]) => {
