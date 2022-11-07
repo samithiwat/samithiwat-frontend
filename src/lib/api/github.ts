@@ -8,6 +8,22 @@ import moment from 'moment';
 const mockData = [
 	{
 		framework: {
+			id: 14,
+			name: 'Fiber',
+			color: 'fff' as Color,
+			iconName: '-',
+			iconColor: 'white' as Color
+		},
+		language: {
+			id: 14,
+			name: 'Go',
+			color: '00ADD8' as Color,
+			iconName: 'GO',
+			iconColor: 'white' as Color
+		}
+	},
+	{
+		framework: {
 			id: 2,
 			name: 'NONE',
 			color: 'fff' as Color,
@@ -197,7 +213,7 @@ const mockData = [
 			iconName: 'typescript',
 			iconColor: 'white' as Color
 		}
-	}
+	},
 ];
 
 const MockData = mockData.map((value, pos) => {
